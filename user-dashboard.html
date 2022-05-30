@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NB4ZFHF');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Enter a proper page title here -->
+    <title>Your User Dashboard at GovtJobKaro</title>
+
+    <!-- CSS to include bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <!-- css to include style.css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- required meta tags essential for seo and link sharing -->
+
+    <!-- Enter a proper description for the page in the meta description tag -->
+    <meta name="description"
+        content="If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385">
+
+    <!-- Enter a keywords for the page in tag -->
+    <meta name="Keywords" content="ENTER_KEYWORDS_HERE">
+
+    <!-- Enter Page title -->
+    <meta property="og:title" content="Your User Dashboard at GovtJobKaro" />
+
+    <!-- Enter Page URL -->
+    <meta property="og:url" content="https://govtjobkaro.com/user-dashboard" />
+
+    <!-- Enter page description -->
+    <meta property="og:description"
+        content="If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385">
+
+    <!-- Enter Logo image URL for example : http://cryptonite.finstreet.in/images/cryptonitepost.png -->
+    <meta property="og:image" itemprop="image" content="https://partner.govtjobkaro.com/meta-img.jpg" />
+    <meta property="og:image:secure_url" itemprop="image" content="https://partner.govtjobkaro.com/meta-img.jpg" />
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="315">
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon location for example :  images/cropped-Fin-270x270.jpg -->
+    <link rel="icon" href="images/logo without text.png">
+
+    <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #efeff6;
+        }
+
+        /* fonts */
+        .poppins-regular {
+            font-family: Poppins Normal;
+            src: url(./fonts/Poppins-Regular.ttf);
+        }
+
+        .poppins-medium {
+            font-family: Poppins Medium;
+            src: url(./fonts/Poppins-Medium.ttf);
+        }
+
+        .poppins-semibold {
+            font-family: Poppins Normal;
+            src: url(./fonts/Poppins-SemiBold.ttf);
+            font-weight: 600;
+        }
+
+        a,
+        a:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        h1 {
+            color: #302D3A;
+        }
+
+        .pink-btn {
+            color: white;
+            padding: 13px 35px;
+            background-color: #F56962;
+            font-family: Poppins Normal;
+            src: url(./fonts/Poppins-Regular.ttf);
+        }
+
+        .purple-btn {
+            color:white;
+            padding: 13px 35px;
+            background-color:#7A7A7A;
+            font-family: Poppins Normal;
+        }
+
+        .restart-sub{
+            color:white;
+            padding: 13px 7px;
+            width: 100%;
+            height: 100px;
+            background-color:#7A7A7A;
+            font-family: Poppins Normal;
+            border-radius: unset;
+        }
+
+        .gray-btn {
+            width: 100%;
+            color: white;
+            padding: 13px 35px;
+            height: 100px;
+            background-color: #7A7A7A;
+            font-family: Poppins Normal;
+            src: url(./fonts/Poppins-Regular.ttf);
+        }
+
+        .welcome-fluid {
+            position: relative;
+            margin-top: 85px;
+            background-color: #FEEFEE;
+        }
+
+        .welcome-fluid img {
+            position: absolute;
+            top: 80px;
+            right: -40px;
+            transform: rotate(90deg);
+        }
+
+        .welcome-container {
+            height: 275px;
+        }
+
+        .welcome-container h1 {
+            font-size: 32px;
+            margin-bottom: 42px;
+        }
+
+        /* welcome-user */
+        .welcome {
+            padding: 0;
+            position: relative;
+            top: -50px;
+            background-color: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-user {
+            padding: 40px 25px;
+        }
+
+        .btn-grp div:nth-child(1) {
+            margin-right: 25px;
+        }
+
+        .btn-grp h6 {
+            font-size: 12px;
+            margin-top: 6px;
+        }
+
+        /* orange-nav */
+        .orange-nav {
+            padding: 0 40px;
+            border-top: 1.5px solid gainsboro;
+        }
+
+        /* orange-btn */
+        .orange-btn,
+        .orange-btn:hover {
+            color: #544E7A;
+            padding: 20px 0;
+            display: inline-block;
+            border-bottom: 2.5px solid transparent;
+        }
+
+        .orange-btn.active {
+            color: #F68C20;
+            border-bottom: 2.5px solid #F68C20;
+        }
+
+        /* tab-pane */
+        /* h1.tab-heading */
+        h1.tab-heading {
+            font-size: 32px;
+            margin: 20px 0 0 0;
+        }
+
+        /* .tab-content */
+        .tab-content {
+            padding: 0;
+            margin-bottom: 40px;
+        }
+
+        .card-container {
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .card-container .tab-card,
+        .card-container .notes-card,
+        .live-sessions video,
+        .announcements-box video {
+            margin-top: 50px;
+        }
+
+        /* tab-card */
+        .tab-card {
+            width: 350px;
+            min-height: 567px;
+            background-color: white;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        /* card-top */
+        .card-top {
+            height: 112px;
+            padding: 15px 15px;
+            padding-bottom: 0;
+        }
+
+        .card-top>img {
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        /* teacher */
+        .teacher img {
+            width: 24px;
+            border-radius: 50%;
+        }
+
+        .teacher span {
+            font-size: 12px;
+        }
+
+        /* card-mid */
+        .card-mid {
+            padding: 25px 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+
+        }
+
+        /* course-stats */
+        .course-stats {
+            height: 65px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+
+        .course-stats h6 {
+            margin: 0;
+        }
+
+        .course-stats p {
+            margin-top: 5px;
+            margin-bottom: 0;
+            font-size: 11px;
+            line-height: 12px;
+        }
+
+        .card-bottom {
+            padding: 20px;
+            padding-top: 0;
+        }
+
+        .card-bottom h4 {
+            font-size: 22px;
+        }
+
+        .card-bottom p {
+            font-size: 14px;
+        }
+
+        .card-bottom a {
+            color: #F68C20;
+        }
+
+        .tab-card .pink-btn {
+            width: 50%;
+            border-radius: unset;
+        }
+        .tab-card .purple-btn {
+            width: 50%;
+            border-radius: unset;
+        }
+
+        .gray-card {
+            border: 2px solid #707070;
+            border-bottom: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: transparent;
+        }
+
+        .notes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* notes-card */
+        .notes-card {
+            width: 350px;
+            min-height: 245px;
+            padding: 30px 20px 20px;
+            background-color: white;
+            border-radius: 5px;
+            border-top: 10px solid black;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .notes-card h6 {
+            margin: 20px 0;
+            line-height: 25px;
+        }
+
+        .notes-card.gray-card {
+            border-bottom: 2px solid #707070;
+        }
+
+        .notes-card .pink-btn,
+        .notes-card .gray-btn {
+            font-size: 14px;
+            width: fit-content;
+            padding: 8px 20px;
+        }
+
+        @media (max-width: 992px) {
+            /* .pink-btn {
+                font-size: 14px;
+                padding: 8px 25px;
+            } */
+
+            .welcome-user {
+                padding: 25px;
+            }
+
+            .btn-grp div:nth-child(1) {
+                margin-right: 0px;
+                margin: 20px 0;
+            }
+
+            .live-sessions,
+            .announcements-box {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .welcome-fluid img {
+                height: 80px;
+            }
+
+            .welcome-container {
+                height: 200px;
+            }
+
+            .welcome-container h1 {
+                font-size: 26px;
+                margin-bottom: 42px;
+            }
+
+            .welcome.container {
+                max-width: 95%;
+            }
+
+            .btn-grp div:nth-child(1) {
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+
+            .orange-nav {
+                padding: 0;
+            }
+
+            .orange-btn {
+                font-size: 14px;
+            }
+
+            h1.tab-heading {
+                font-size: 26px;
+                margin: 10px 0 0 0;
+                text-align: center;
+            }
+
+            .tab-card {
+                min-height: 522px;
+            }
+
+            .card-container .tab-card,
+            .card-container .notes-card,
+            .live-sessions video,
+            .announcements-box video {
+                margin: 0 auto;
+                margin-top: 40px;
+            }
+
+            .live-sessions,
+            .announcements-box {
+                grid-template-columns: 1fr;
+            }
+            .pink-btn {
+            padding: 13px 0;
+            }
+
+            .purple-btn {
+                padding: 13px 0;
+            }
+
+            .restart-sub{
+                height: 76px;
+            }
+            .gray-btn {
+                height: 76px;
+            }
+        }
+
+        @media (max-width: 425px) {
+            .welcome.container {
+                max-width: 100%;
+            }
+
+            .welcome-container {
+                height: 180px;
+            }
+
+            .welcome-container h1 {
+                font-size: 20px;
+                margin-bottom: 42px;
+            }
+
+            .orange-btn {
+                font-size: 12px;
+                padding: 15px 0;
+                padding-bottom: 12px;
+            }
+
+            .welcome-user {
+                padding: 20px;
+                padding-bottom: 15px;
+            }
+
+            .welcome-user h4 {
+                margin: 15px;
+                font-size: 22px;
+            }
+
+            .card-bottom p {
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+
+            .card-bottom h4 {
+                font-size: 18px;
+            }
+
+            .live-sessions video,
+            .announcements-box video {
+                max-width: 100%;
+                margin-top: 25px;
+            }
+
+            .card-container .tab-card,
+            .card-container .notes-card {
+                width: 100%;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-top: 30px;
+            }
+
+            h1.tab-heading {
+                margin-top: 0;
+                font-size: 22px;
+            }
+
+            .offers-and-deals {
+                padding-bottom: 40px;
+                padding-top: 20px;
+            }
+
+            .capital {
+                text-transform: uppercase;
+            }
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+        }
+
+        .loader-containerAnnouncement {
+            width: 1130px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #F1F3F8;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body onload="loader()">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB4ZFHF" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <!-- cookies -->
+    <section class="cookies-container">
+        <div class="cookies-box">
+            <p class="poppins-regular text-justify mt-4">
+                We use Cookies and similar technologies ("Cookies") to provide ours services to you, enhance your
+                experience
+                with our services and customise the adverts you see, including through third parties.
+            </p>
+            <p class="poppins-regular text-justify">
+                Accept our use of cookies to continue on govtjobkaro website or to watch our videos. For more
+                information please
+                refer to our <a href="terms-and-conditions">terms & conditions.</a>
+            </p>
+            <div class="d-flex align-items-center justify-content-center">
+                <button class="btn poppins-medium cookies-btn">Accept Cookies</button>
+            </div>
+            <img class="cookie-img" src="https://storage.googleapis.com/govtjobkaro_images/cookie.png" alt="cookie">
+        </div>
+    </section>
+    <!-- Desktop view -->
+    <div class="d-none d-lg-block">
+
+        <!-- header -->
+        <div class="header fixed-top"></div>
+
+        <!-- welcome-fluid -->
+        <div class="welcome-fluid container-fluid">
+            <div class="welcome-container container d-flex align-items-center">
+                <h1 class="poppins-medium font-weight-bold" style="font-size: 50px;">Welcome to Your
+                    Learning Dashboard
+                </h1>
+            </div>
+            <img src="https://storage.googleapis.com/govtjobkaro_images/Pattern.svg" alt="Pattern">
+        </div>
+
+        <!-- welcome -->
+        <div class="welcome container">
+            <!-- welcome-user -->
+            <div class="welcome-user d-flex align-items-center justify-content-between">
+                <h4 class="poppins-medium">Welcome <span class="name text-capitalize"></span></h4>
+                <div class="btn-grp d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center justify-content-center flex-column">
+                        <button class="btn pink-btn" onclick="window.location='partner'">Join The Referral Program
+                            Now</button>
+                        <h6 class="poppins-regular">Click to Join checkout the Referral Program</h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center flex-column">
+                        <button class="btn pink-btn" id="notiOn"
+                            onclick="window.location='https://telegram.me/govtjobkaro'">Join the Notifications
+                            Group</button>
+                        <h6 class="poppins-regular" id="removeClickToTurnOn">Click here to join the
+                            Telegram Group Now</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- orange-nav -->
+            <div class="orange-nav poppins-medium">
+                <ul class="nav nav-pills d-flex align-items-center justify-content-around" id="pills-tab"
+                    role="tablist">
+                    <li class="nav-item">
+                        <a class="orange-btn active" id="courses" data-toggle="pill" href="#courses-tab" role="tab"
+                            aria-controls="courses-tab" aria-selected="true">Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="orange-btn" id="invoice" data-toggle="pill" href="#invoice-tab" role="tab"
+                            aria-controls="invoice-tab" aria-selected="false">Invoice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="orange-btn" id="live-sessions" data-toggle="pill" href="#live-sessions-tab" role="tab"
+                            aria-controls="live-sessions-tab" aria-selected="false">Live Sessions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="orange-btn" id="announcement" data-toggle="pill" href="#announcements-tab" role="tab"
+                            aria-controls="announcements-tab" aria-selected="false">Announcements</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- tab-content -->
+        <div class="tab-content container" id=" pills-tabContent">
+            <!-- tab 1 -->
+            <div class="tab-pane fade show active" id="courses-tab" role="tabpanel" aria-labelledby="courses">
+                <h1 class="tab-heading poppins-medium" id="purchasedCourse">
+                    Your Purchased Courses
+                </h1>
+
+                <div class="card-container" id="courseDesk">
+                    <!-- course_1 -->
+
+
+                    <!-- course_3 -->
+                    <div class="tab-card gray-card">
+                        <div class="card-top d-flex align-items-center">
+                            <img src="https://storage.googleapis.com/govtjobkaro_images/img.jpg" alt="image">
+                            <div class="course-detail">
+                                <h6 class="poppins-medium">Get Enrolled Right Now</h6>
+                                <div class="teacher">
+                                    <img src="https://storage.googleapis.com/govtjobkaro_images/Rectangle 22.png" alt="teacher">
+                                    <span class="poppins-regular">????? ????</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-mid">
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #6C63FF;">
+                                <h6 class="poppins-medium">???</h6>
+                                <p class="poppins-regular">Previous Lesson Name</p>
+                            </div>
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #43C8B1;">
+                                <h6 class="poppins-medium">???</h6>
+                                <p class="poppins-regular">Total Mock Test Completed</p>
+                            </div>
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #F56962;">
+                                <h6 class="poppins-medium">???</h6>
+                                <p class="poppins-regular">Examination Date</p>
+                            </div>
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #F68C20;">
+                                <h6 class="poppins-medium">???</h6>
+                                <p class="poppins-regular">Total Course Completed</p>
+                            </div>
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #5F5982;">
+                                <h6 class="poppins-medium">????</h6>
+                                <p class="poppins-regular">Live Session Date</p>
+                            </div>
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #33333D;">
+                                <h6 class="poppins-medium">???</h6>
+                                <p class="poppins-regular">Examination Countdown</p>
+                            </div>
+                        </div>
+                        <div class="card-bottom text-center">
+                            <h4 class="poppins-medium">Are you Ready to Crack the Examination?</h4>
+                            <p class="poppins-regular">If You Are Facing Any Problems or need Guidance Don't Forget to
+                                <a
+                                    href="https://wa.me/917717303385/?text=Hello%2C%20I%20have%20a%20query%20regarding%20the%20course">Contact
+                                    Us</a>
+                            </p>
+                        </div>
+                        <button class="btn gray-btn" onclick="window.location='courses'">Click to Enroll Now</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- tab 2 -->
+            <div class="tab-pane fade" id="invoice-tab" role="tabpanel" aria-labelledby="invoice">
+                <h1 class="tab-heading poppins-medium">
+                    Your Invoices
+                </h1>
+
+                <div class="card-container notes" id="invoiceDesk">
+
+                    <!-- <div class="notes-card d-flex justify-content-between flex-column gray-card"
+                        style="border-top-color: #707070;">
+                        <h5 class="poppins-medium">You Haven't Purchased Anything Yet</h5>
+                        <h6 class="poppins-regular">
+                            ???
+                        </h6>
+                        <button class="btn gray-btn" onclick="window.location='courses'">Join A Course Now</button>
+                    </div> -->
+                </div>
+            </div>
+            <!-- tab 3 -->
+            <div class=" tab-pane fade" id="live-sessions-tab" role="tabpanel" aria-labelledby="live-sessions">
+                <h1 class="tab-heading poppins-medium mb-5">
+                    Latest Live Sessions
+                </h1>
+                <div class="live-sessions">
+                    <div class="notes-card gray-card text-center" style="border-top-color: #707070;min-height: 225px;">
+                        <h3 class="poppins-medium pt-5">Coming Soon!</h3>
+
+                    </div>
+                    <!-- <video src="/" style="background-color: black;"></video>
+                    <video src="/" style="background-color: black;"></video>
+                    <video src="/" style="background-color: black;"></video> -->
+                    <!-- poster="http://placehold.it/360x205" -->
+                </div>
+            </div>
+            <!-- tab 4 -->
+            <div class="tab-pane fade" id="announcements-tab" role="tabpanel" aria-labelledby="announcements">
+                <h1 class="tab-heading poppins-medium mb-5">
+                    Latest Announcements
+                </h1>
+
+                <div class="announcements-box loadAnnouncement"
+                    style=" display: grid; grid-template-columns: repeat(3, 1fr);">
+                    <div class="loader-containerAnnouncement">
+                        <div class="loader"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!--  offer and Deal -->
+        <div class="offers-deals"></div>
+
+        <!-- footer -->
+        <div class="footer"></div>
+    </div>
+    </div>
+
+
+
+
+    <!-------------- Mobile View ----------->
+    <div class="d-lg-none position-relative">
+
+        <!-- header -->
+        <div class="navbar-bottom fixed-bottom"></div>
+
+        <!-- welcome-fluid -->
+        <div class="welcome-fluidw container-fluid" style="background-color: #FEEFEE;padding-bottom:85px;">
+            <!-- <div class="container-fluid text-center">
+                <img src="images/GovtJobsKaro 1@2x.png" style="width: 152px;" onclick="window.location='/'">
+            </div> -->
+            <div class="header-mobile"></div>
+            <div class="welcome-containerr container text-center pt-3">
+                <h1 class="poppins-medium font-weight-bold" style="font-size: 28px;">Welcome to Your Learning Dashboard
+                </h1>
+            </div>
+            <!-- <img src="https://storage.googleapis.com/govtjobkaro_images/Pattern.svg" alt="Pattern"> -->
+        </div>
+
+        <!-- welcome -->
+        <div class="welcome container">
+            <!-- welcome-user -->
+            <div class="welcome-user d-flex align-items-center justify-content-between flex-column"
+                style="box-shadow: 0px -2px 10px #aaa;">
+                <h4 class="poppins-medium">Welcome <span class="name text-capitalize"></span></h4>
+                <div class="btn-grp d-flex align-items-center justify-content-between flex-column">
+                    <div class="d-flex align-items-center justify-content-center flex-column">
+                        <button class="btn pink-btn" onclick="window.location='partner'" style="width: 92vw;">Join The
+                            Referral Program
+                            Now</button>
+                        <h6 class="poppins-regular">Click to Join checkout the Referral Program
+                        </h6>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center flex-column">
+                        <button class="btn pink-btn" style="width: 92vw;" id="notiOnMob"
+                            onclick="window.location='https://telegram.me/govtjobkaro'">Join the Notification
+                            Group</button>
+                        <h6 class="poppins-regular" id="removeClickToTurnOnMob">Click here to join the Telegram Group
+                            Now</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- orange-nav -->
+            <div class="orange-nav poppins-medium d-none">
+                <ul class="nav nav-pills d-flex align-items-center justify-content-around" id="pills-tab"
+                    role="tablist">
+                    <li class="nav-item">
+                        <a class="orange-btn active" id="courses-m" data-toggle="pill" href="#courses-tab-m" role="tab"
+                            aria-controls="courses-tab-m" aria-selected="true">Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="orange-btn" id="invoice-m" data-toggle="pill" href="#invoice-tab-m" role="tab"
+                            aria-controls="invoice-tab-m" aria-selected="false">Invoice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="orange-btn" id="live-sessions-m" data-toggle="pill" href="#live-sessions-tab-m"
+                            role="tab" aria-controls="live-sessions-tab-m" aria-selected="false">Live Sessions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="orange-btn" id="announcements-m" data-toggle="pill" href="#announcements-tab-m"
+                            role="tab" aria-controls="announcements-tab-m" aria-selected="false">Announcements</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- tab-content -->
+        <div class="tab-content container" id=" pills-tabContent">
+            <!-- tab 1 -->
+            <div class="tab-pane fade show active" id="courses-tab-m" role="tabpanel" aria-labelledby="courses-m">
+                <h1 class="tab-heading poppins-medium" id="purchasedCourseMob">
+                    Your Purchased Courses
+                </h1>
+
+                <div class="card-container d-flex flex-wrap align-items-start justify-content-between" id="courseMob">
+
+                    <!-- course_3 -->
+                    <div class="tab-card gray-card">
+                        <div class="card-top d-flex">
+                            <img src="https://storage.googleapis.com/govtjobkaro_images/img.jpg" alt="image">
+                            <div class="course-detail">
+                                <h6 class="poppins-medium">Get Enrolled Right Now</h6>
+                                <div class="teacher">
+                                    <img src="https://storage.googleapis.com/govtjobkaro_images/Rectangle 22.png" alt="teacher">
+                                    <span class="poppins-regular">???? ????</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-mid">
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #6C63FF;">
+                                <h6 class="poppins-medium">???</h6>
+                                <p class="poppins-regular">Previous Lesson Name</p>
+                            </div>
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #43C8B1;">
+                                <h6 class="poppins-medium">???</h6>
+                                <p class="poppins-regular">Total Mock Test Completed</p>
+                            </div>
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #F56962;">
+                                <h6 class="poppins-medium">???</h6>
+                                <p class="poppins-regular">Examination Date</p>
+                            </div>
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #F68C20;">
+                                <h6 class="poppins-medium">???</h6>
+                                <p class="poppins-regular">Total Course Completed</p>
+                            </div>
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #5F5982;">
+                                <h6 class="poppins-medium">????</h6>
+                                <p class="poppins-regular">Live Session Date</p>
+                            </div>
+                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                style="border-color: #33333D;">
+                                <h6 class="poppins-medium">???</h6>
+                                <p class="poppins-regular">Examination Countdown</p>
+                            </div>
+                        </div>
+                        <div class="card-bottom text-center">
+                            <h4 class="poppins-medium">Are you Ready to Crack the Examination?</h4>
+                            <p class="poppins-regular">If You Are Facing Any Problems or need Guidance Don't Forget to
+                                <a
+                                    href="https://wa.me/917717303385/?text=Hello%2C%20I%20have%20a%20query%20regarding%20the%20course">Contact
+                                    Us
+                                </a>
+                            </p>
+                        </div>
+                        <button class="btn gray-btn" onclick="window.location='courses'">Click to Enroll Now</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- tab 2 -->
+            <div class="tab-pane fade" id="invoice-tab-m" role="tabpanel" aria-labelledby="invoice-m">
+                <h1 class="tab-heading poppins-medium">
+                    Your Invoices
+                </h1>
+
+                <div class="card-container notes d-flex align-items-center flex-wrap justify-content-between text-center"
+                    id="invoiceMob">
+
+                    <!-- <div class="notes-card d-flex justify-content-between flex-column gray-card"
+                        style="border-top-color: #707070;">
+                        <h5 class="poppins-medium">You Haven't Purchased Anything Yet</h5>
+                        <h6 class="poppins-regular">
+                            ???
+                        </h6>
+                        <button class="btn gray-btn" onclick="window.location='courses'">Join A Course Now</button>
+                    </div> -->
+                </div>
+            </div>
+            <!-- tab 3 -->
+            <div class=" tab-pane fade" id="live-sessions-tab-m" role="tabpanel" aria-labelledby="live-sessions-m">
+                <h1 class="tab-heading poppins-medium mb-4">
+                    Latest Live Sessions
+                </h1>
+
+                <div class="container live-sessions">
+                    <div class="notes-card gray-card text-center"
+                        style="border-top-color: #707070; width: auto;min-height: 225px;">
+                        <h3 class="poppins-medium pt-5">Coming Soon!</h3>
+
+                    </div>
+                    <!-- <video src="/" poster="http://placehold.it/360x205"></video>
+                    <video src="/" poster="http://placehold.it/360x205"></video>
+                    <video src="/" poster="http://placehold.it/360x205"></video> -->
+
+                </div>
+            </div>
+            <!-- tab 4 -->
+            <div class="tab-pane fade" id="announcements-tab-m" role="tabpanel" aria-labelledby="announcements-m">
+                <h1 class="tab-heading poppins-medium">
+                    Latest Announcements
+                </h1>
+
+                <div class="container announcements-box loadAnnouncement mt-4">
+                    <!-- <video src="/" poster="http://placehold.it/360x205"></video>
+                    <video src="/" poster="http://placehold.it/360x205"></video>
+                    <video src="/" poster="http://placehold.it/360x205"></video> -->
+
+                    <div class="loader-containerAnnouncement" style="width: 92vw; height: 250px;">
+                        <div class="loader"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--  offer and Deal -->
+        <div class="offers-deals"></div>
+        <!-- footer -->
+        <div class="footer"></div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/html2pdf.bundle.js"></script>
+
+    <!--FontAwsome -->
+    <script src="https://kit.fontawesome.com/f368dd0adb.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-messaging.js"></script>
+
+    <script>
+
+        $(".header").load('template/header.html');
+        $(".header-mobile").load('template/header-mobile.html');
+        $(".offers-deals").load('template/offers-deals.html');
+        $(".footer").load('template/footer.html');
+        // $(".navbar-bottom").load('template/navBottom-mobile.html');
+
+        // mobile navbar-bottom
+        $('.navbar-bottom').addClass('navbar-fixed-bottom');
+        $(".navbar-bottom").load('template/user-dashboard-bottom-nav.html');
+
+        // $('.loadAnnouncement').load('php/rss.php');
+        var cancel;
+        $( document ).ready(function() {
+            //Firebase Notifications 
+            turnOnNotifications()
+
+            // function turnOnNotifications() {
+            //     var firebaseConfig = {
+            //         apiKey: "AIzaSyAJPwJKgoBfCbFn86wrf8Ru2hVXALWMgBE",
+            //         authDomain: "govtjobkaro-fa2c5.firebaseapp.com",
+            //         projectId: "govtjobkaro-fa2c5",
+            //         storageBucket: "govtjobkaro-fa2c5.appspot.com",
+            //         messagingSenderId: "769620190740",
+            //         appId: "1:769620190740:web:39d050f58b3f3e0d7e6901",
+            //         measurementId: "G-SG5JCVGVNS"
+            //     };
+
+            //     firebase.initializeApp(firebaseConfig);
+            //     const messaging = firebase.messaging();
+
+            //     messaging.requestPermission()
+            //         .then(function () {
+            //             $(".loader-container").removeClass("d-none");
+            //             console.log("Notification Permission");
+            //             return messaging.getToken();
+            //         })
+            //         .then(function (token) {
+            //             console.log("Token: " + token);
+            //             $.ajax({
+            //                 type: 'POST',
+            //                 url: 'php/notifications.php',
+            //                 dataType: "json",
+            //                 async: true,
+            //                 data: {
+            //                     notifications: token,
+            //                     userId: userId
+            //                 },
+            //                 success: function (result) {
+            //                     if (result.status == "success") {
+            //                         $('#notiOn').html('Notifications: ON');
+            //                         $('#notiOnMob').html('Notifications: ON');
+            //                         $("#removeClickToTurnOnMob").css('visibility', 'hidden');
+            //                         $("#removeClickToTurnOn").css('visibility', 'hidden');
+            //                         $(".loader-container").addClass("d-none");
+
+            //                     } else if (result.status == "failure") {
+            //                         alert('Please try again');
+            //                     }
+            //                 },
+            //                 error: function (error) {
+            //                     alert('There was an unexpected error');
+            //                 }
+            //             })
+            //         })
+
+            //         .catch(function (reason) {
+            //             console.log(reason);
+            //         })
+
+
+            //     messaging.onMessage(function (payload) {
+            //         console.log(payload);
+            //         const notificationOption = {
+            //             body: payload.notification.body,
+            //             icon: payload.notification.icon
+            //         };
+            //         if (Notification.permission === "granted") {
+            //             var notification = new Notification(payload.notification.title, notificationOption);
+            //             notification.onclick = function (ev) {
+            //                 ev.preventDefault();
+            //                 window.open(payload.notification.click_action, '_blank');
+            //                 notification.close();
+            //             }
+            //         }
+            //     });
+            //     messaging.onTokenRefresh(function () {
+            //         $(".loader-container").removeClass("d-none");
+            //         messaging.getToken()
+            //             .then(function (newtoken) {
+            //                 console.log("New Token: " + newtoken);
+            //                 $.ajax({
+            //                     type: 'POST',
+            //                     url: 'php/notifications.php',
+            //                     dataType: "json",
+            //                     async: true,
+            //                     data: {
+            //                         notifications: newtoken,
+            //                         userId: userId
+            //                     },
+            //                     success: function (result) {
+            //                         if (result.status == "success") {
+            //                             $('#notiOn').html('Notifications: ON');
+            //                             $('#notiOnMob').html('Notifications: ON');
+            //                             $("#removeClickToTurnOnMob").css('visibility', 'hidden');
+            //                             $("#removeClickToTurnOn").css('visibility', 'hidden');
+            //                             $(".loader-container").addClass("d-none");
+            //                         } else if (result.status == "failure") {
+            //                             alert('Please try again');
+            //                         }
+            //                     },
+            //                     error: function (error) {
+            //                         alert('There was an unexpected error');
+            //                     }
+            //                 })
+            //             })
+            //             .catch(function (reason) {
+            //                 console.log(reason);
+            //             })
+            //     })
+
+
+            // }
+
+            // Get viewport details
+            var val = $(window).width() > 992 ? "desktop" : "mobile";
+
+
+            // rss feed ajax call
+            setTimeout(() => {
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/rss.php',
+                    dataType: "json",
+                    async: true,
+                    data: {
+                        token: value
+                    },
+                    success: function (obj) {
+                        $(".loader-containerAnnouncement").removeClass('d-none');
+
+
+                        if (obj.status == 'success') {
+                            $("#announcement").attr('id', 'none');
+                            result = obj.data;
+                            // console.log('result', result);
+                            for (var i = 0; i < result.length; i++) {
+                                $('.loadAnnouncement').html($('.loadAnnouncement').html() + result[i])
+                            }
+
+                            setTimeout(() => {
+                                $(".loader-containerAnnouncement").addClass('d-none');
+                            }, 3000);
+                        } else {
+                            console.log('some issue with feed');
+                        }
+                    }
+                });
+            }, 8000);
+
+
+
+            // header animation
+            $(window).scroll(function () {
+                var sticky = $('.header'),
+                    scroll = $(window).scrollTop();
+
+                if (scroll >= 100) {
+                    sticky.addClass('fixed shadow');
+                } else {
+                    sticky.removeClass('fixed shadow');
+                }
+            });
+
+            // get token
+            function readCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            var userId = "";
+            var mobile_num = "";
+            var value = readCookie('token');
+            $(document).ready(function () {
+                //User Info api call
+                var result = "";
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/userInfo.php',
+                    dataType: "json",
+                    async: false,
+                    data: {
+                        token: value
+                    },
+                    success: function (obj) {
+                        if (obj.status == 'success') {
+                            userId = obj.User.user_id;
+                            // console.log(userId);
+                            result = obj;
+                            // console.log(obj);
+                            $('.name').html(obj.User.full_name);
+                            $('#nameForNavBottom').html(obj.User.full_name);
+                            var notiToken = obj.User.notification_token;
+                            mobile_num = obj.User.mobile_no;
+
+                            // if (notiToken !== null && Notification.permission == "granted") {
+                            //     $('#notiOn').html('Notifications: ON');
+                            //     $('#notiOnMob').html('Notifications: ON');
+                            //     $("#removeClickToTurnOnMob").css('visibility', 'hidden');
+                            //     $("#removeClickToTurnOn").css('visibility', 'hidden');
+                            // }
+                        } else if (obj.status == 'failure') {
+                            function delete_cookie(name) {
+                                document.cookie =
+                                    name + "=; Domain=govtjobkaro.com; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+                            }
+                            delete_cookie("token");
+                            // alert('your Session is expired please login again');
+                            window.location = 'login-register';
+                        } else {
+                            console.log('internet issue');
+                        }
+                    }
+                });
+
+                cancel = function cancel(courseId, orderCoursesId,razorpaysubscriptionid){
+                    // console.log(courseId);
+                    // console.log(orderCoursesId);
+                    // console.log(razorpaysubscriptionid);
+                    $.ajax({
+                        type: 'POST',
+                        url: 'php/cancel-sub.php',
+                        dataType: "json",
+                        async: false,
+                        data: {
+                            course_id:courseId,
+                            order_courses_id:orderCoursesId,
+                            mobile_no: mobile_num,
+                            razorpaysubscriptionid:razorpaysubscriptionid
+                        },
+                        success: function (obj) {
+                            if (obj.status == 'success') {
+                                alert(obj.msg);  
+
+                                
+                            } else if (obj.status == 'failure') {
+                                
+                            } else {
+                                console.log('internet issue');
+                            }
+                        }
+                    });  
+                }
+
+                // console.log(mobile_num);
+                let order_id = "";
+                // console.log(value);
+                if (value == null) {
+                    // window.location = "login-register";
+                } else {
+                    // var mobileNum = localStorage.getItem('mobile-login');
+                    let orderArray = [];
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'php/purchased-courses.php',
+                        dataType: "json",
+                        async: false,
+                        data: {
+                            type: 'normal',
+                            mobile: mobile_num
+                        },
+                        success: function (obj) {
+                            if (obj.status == 'success') {
+                                var purCourses = obj.data;
+                                // console.log(purCourses);
+                                if (purCourses.length == 0) {
+                                    $('#purchasedCourse').html('You have not purchased any courses yet!');
+                                    $('#purchasedCourseMob').html('You have not purchased any courses yet!');
+                                    $('#invoiceDesk').html(`<div class="notes-card d-flex justify-content-between flex-column gray-card"
+                                            style="border-top-color: #707070;">
+                                            <h5 class="poppins-medium">You Haven't Purchased Anything Yet</h5>
+                                            <h6 class="poppins-regular">
+                                                ???
+                                            </h6>
+                                            <button class="btn gray-btn" onclick="window.location='courses'">Join A Course Now</button>
+                                        </div>`);
+                                    $('#invoiceMob').html(`<div class="notes-card d-flex justify-content-between flex-column gray-card"
+                                            style="border-top-color: #707070;">
+                                            <h5 class="poppins-medium">You Haven't Purchased Anything Yet</h5>
+                                            <h6 class="poppins-regular">
+                                                ???
+                                            </h6>
+                                            <button class="btn gray-btn ml-auto mr-auto" onclick="window.location='courses'" style="width: 80vw">Join A Course Now</button>
+                                        </div>`);
+                                }
+                                for (var i = 0; i < purCourses.length; i++) {
+                                    order_id = purCourses[i].order_courses_id;
+                                    orderArray.push(order_id);
+                                    var dateOfPur = purCourses[i].date_now;
+                                    var purDate = dateOfPur.split('T');
+                                    var purDateRev = purDate[0].split('-');
+
+                                    if (purCourses[i].examination_date == null) {
+                                        purCourses[i].examination_date = "Not Available"
+                                    }
+
+                                    var courseId = purCourses[i].course_id;
+                                    var razorpaysubscriptionid = purCourses[i].razorpay_subscription_id;
+                                    if(razorpaysubscriptionid !== 'No' && razorpaysubscriptionid !== null){
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: 'php/check-sub.php',
+                                            async: false,
+                                            dataType: "json",
+                                            data: {
+                                                mobile: mobile_num,
+                                                courseId:courseId,
+                                                razorpaysubscriptionid:razorpaysubscriptionid,
+
+                                            },
+                                            success: function(response) {
+                                                if (response.status == 'active') {
+                                                    var date = response.charge_at;
+                                                    $('#'+courseId+' .sub-date').html(date);
+                                                } else if (response.status == 'cancelled') {
+                                                    cancel(courseId, order_id, razorpaysubscriptionid);
+                                                } else {
+                                                    // alert('Check your internet connection and try again later');
+                                                }
+                                            }
+                                        });
+                                    }
+
+                                    let timestamp = new Date(dateOfPur).getTime();
+                                    
+                                    $('#courseDesk').html(`<div class="tab-card" id="`+courseId+`">
+                                        <div class="card-top d-flex align-items-center">
+                                            <img src="${purCourses[i].course_thumb_img}" alt="image">
+                                            <div class="course-detail">
+                                                <h6 class="poppins-medium">${purCourses[i].course_name}</h6>
+                                                <div class="teacher">
+                                                    <img src="${purCourses[i].state_logo}" alt="teacher">
+                                                    <span class="poppins-regular text-uppercase">${purCourses[i].category_type}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-mid">
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #6C63FF;">
+                                                <h6 class="poppins-medium">${purCourses[i].last_lecture_watched}</h6>
+                                                <p class="poppins-regular">Previous Lesson Name</p>
+                                            </div>
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #43C8B1;">
+                                                <h6 class="poppins-medium">${purCourses[i].total_mock_completed}</h6>
+                                                <p class="poppins-regular">Total Mock Test Completed</p>
+                                            </div>
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #F56962;">
+                                                <h6 class="poppins-medium">${purCourses[i].examination_date}</h6>
+                                                <p class="poppins-regular">Examination Date</p>
+                                            </div>
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #F68C20;">
+                                                <h6 class="poppins-medium">${purCourses[i].percentage_watched}%</h6>
+                                                <p class="poppins-regular">Total Course Completed</p>
+                                            </div>
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #5F5982;">
+                                                <h6 class="poppins-medium">${purCourses[i].live_session_date}</h6>
+                                                <p class="poppins-regular">Live Session Date</p>
+                                            </div>
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #33333D;">
+                                                <h6 class="poppins-medium">183 Days</h6>
+                                                <p class="poppins-regular">Examination Countdown</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-bottom text-center">
+                                            <h4 class="poppins-medium">Are you Ready to Crack the Examination?</h4>
+                                            <p class="poppins-regular">If You Are Facing Any Problems or need Guidance Don't Forget to
+                                                <a href="https://wa.me/917717303385/?text=Hello%2C%20I%20have%20a%20query%20regarding%20the%20${purCourses[i].course_name}">Contact
+                                                    Us</a>
+                                            </p>
+                                            <h6 class="poppins-regular sub-date" style="font-size:14px;">Subscription charge Date: ${purCourses[i].charge_date}</h6>
+                                        </div>
+                                        <div class="d-flex">
+                                            <button onclick="window.location='https://learn.govtjobkaro.com/?course_id=${purCourses[i].course_id}'" class="btn pink-btn">Click to Continue Watching</button>
+                                            <button onclick="cancel('`+courseId+`', '`+order_id+`', '`+razorpaysubscriptionid+`')" class="btn purple-btn" style="display:none;">Click to Cancel Subscription</button>
+                                            <button onclick="cancel('`+courseId+`', '`+order_id+`', '`+razorpaysubscriptionid+`')" class="btn restart-sub" style="display:none;">Restart Subscription to Watch</button>
+                                        </div>
+                                    </div>` + $('#courseDesk').html())
+
+                                    if(razorpaysubscriptionid == null){
+                                        $('#'+courseId+' .restart-sub').css('display','block');
+                                        $('#'+courseId+' .pink-btn').css('display','none');                                        
+                                    }else if(razorpaysubscriptionid == 'No'){
+                                        $('#'+courseId+' .sub-date').addClass('invisible');
+                                        $('#'+courseId+' .pink-btn').css({'width' : '100%','height' : '100px'});
+                                    }else{
+                                        $('#'+courseId+' .purple-btn').css('display','block');
+                                    }
+
+                                    $('#courseMob').html(`<div class="tab-card" id="`+courseId+`-mobile">
+                                        <div class="card-top d-flex align-items-center">
+                                            <img src="${purCourses[i].course_thumb_img}" alt="image">
+                                            <div class="course-detail">
+                                                <h6 class="poppins-medium">${purCourses[i].course_name}</h6>
+                                                <div class="teacher">
+                                                    <img src="${purCourses[i].state_logo}" alt="teacher">
+                                                    <span class="poppins-regular text-uppercase" >${purCourses[i].category_type}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-mid">
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #6C63FF;">
+                                                <h6 class="poppins-medium">${purCourses[i].last_lecture_watched}</h6>
+                                                <p class="poppins-regular">Previous Lesson Name</p>
+                                            </div>
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #43C8B1;">
+                                                <h6 class="poppins-medium">${purCourses[i].total_mock_completed}</h6>
+                                                <p class="poppins-regular">Total Mock Test Completed</p>
+                                            </div>
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #F56962;">
+                                                <h6 class="poppins-medium">${purCourses[i].examination_date}</h6>
+                                                <p class="poppins-regular">Examination Date</p>
+                                            </div>
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #F68C20;">
+                                                <h6 class="poppins-medium">${purCourses[i].percentage_watched}%</h6>
+                                                <p class="poppins-regular">Total Course Completed</p>
+                                            </div>
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #5F5982;">
+                                                <h6 class="poppins-medium">${purCourses[i].live_session_date}</h6>
+                                                <p class="poppins-regular">Live Session Date</p>
+                                            </div>
+                                            <div class="course-stats text-center d-flex align-items-center justify-content-center flex-column"
+                                                style="border-color: #33333D;">
+                                                <h6 class="poppins-medium">183 Days</h6>
+                                                <p class="poppins-regular">Examination Countdown</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-bottom text-center">
+                                            <h4 class="poppins-medium">Are you Ready to Crack the Examination?</h4>
+                                            <p class="poppins-regular">If You Are Facing Any Problems or need Guidance Don't Forget to
+                                                <a href="https://wa.me/917717303385/?text=Hello%2C%20I%20have%20a%20query%20regarding%20the%20${purCourses[i].course_name}">Contact
+                                                    Us</a>
+                                            </p>
+                                            <h6 class="poppins-regular pt-3 sub-date" style="font-size:12px;">Subscription charge Date: ${purCourses[i].charge_date}</h6>
+                                        </div>
+                                        <div class="d-flex">
+                                            <button onclick="window.location='https://learn.govtjobkaro.com/?course_id=${purCourses[i].course_id}'" class="btn pink-btn">Click to Continue Watching</button>
+                                            <button onclick="cancel('`+courseId+`', '`+order_id+`', '`+razorpaysubscriptionid+`')" class="btn purple-btn" style="display:none;">Click to Cancel Subscription</button>
+                                            <button onclick="restart('`+courseId+`', '`+order_id+`', '`+razorpaysubscriptionid+`')" class="btn restart-sub" style="display:none;">Restart Subscription to Watch</button>
+                                        </div>
+                                    </div>` + $('#courseMob').html())
+
+                                    
+                                    if(razorpaysubscriptionid == null){
+                                        $('#'+courseId+'-mobile .pink-btn').css('display','none');                                        
+                                    }else if(razorpaysubscriptionid == 'No'){
+                                        $('#'+courseId+'-mobile .sub-date').addClass('invisible');
+                                        $('#'+courseId+'-mobile .pink-btn').css({'width' : '100%','height' : '76px'});
+                                    }else{
+                                        $('#'+courseId+'-mobile .purple-btn').css('display','block');
+                                    }
+                                    
+                                    $('#invoiceDesk').html(`<div class="notes-card d-flex justify-content-between flex-column"
+                                                        style="border-top-color: #F56962;">
+                                                        <h5 class="poppins-medium">Invoice: ${timestamp}</h5>
+                                                        <h6 class="poppins-regular">
+                                                            This Invoice is for <br>
+                                                            <span class="poppins-medium">${purCourses[i].course_name}</span><br> purchased on <span
+                                                                class="poppins-medium">${purDateRev[2] + '-' + purDateRev[1] + '-' + purDateRev[0]}</span>
+                                                        </h6>
+                                                        <button class="btn pink-btn" id="${order_id}-desktop">Download Now</button>
+                                                    </div>` + $('#invoiceDesk').html()
+                                    )
+
+                                    $('#invoiceMob').html(` <div class="notes-card d-flex justify-content-between flex-column"
+                                                        style="border-top-color: #F56962;">
+                                                        <h5 class="poppins-medium">Invoice: ${timestamp}</h5>
+                                                        <h6 class="poppins-regular">
+                                                            This Invoice is for <br>
+                                                            <span class="poppins-medium">${purCourses[i].course_name}</span><br> purchased on <span
+                                                                class="poppins-medium">${purDateRev[2] + '-' + purDateRev[1] + '-' + purDateRev[0]}</span>
+                                                        </h6>
+                                                        <button class="btn pink-btn mr-auto ml-auto" id="${order_id}-mobile" style="width: 80vw;">Download Now</button>
+                                                    </div>` + $('#invoiceMob').html()
+                                    )
+
+                                    // console.log("OrderArray: " + order_id);
+                                }
+                                // console.log(orderArray);
+
+
+                            } else if (obj.status == 'failure') {
+                                // alert(obj.msg);
+                                function delete_cookie(name) {
+                                    document.cookie =
+                                        name + "=; Domain=govtjobkaro.com; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+                                }
+                                delete_cookie("token");
+                                window.location = "login-register"
+                            } else {
+                                alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                            }
+                        }
+                    });
+
+                    orderArray.forEach(orderId => {
+                        $.ajax({
+                            type: 'POST',
+                            url: 'php/invoice.php',
+                            dataType: "json",
+                            data: {
+                                order_id: orderId
+                            },
+                            success: function (details) {
+                                if (details.status == 'success') {
+                                    // console.log(details);
+                                    let template = '';
+                                    let user = details.data;
+                                    let user_name = user.name;
+                                    let user_address = user.address + ", " + user.city + ", " + user.state + " - " + user.pincode;
+                                    let user_mobile = user.phonenumber;
+                                    let course_name = user.course_name;
+                                    let price = user.course_price;
+                                    let course_price = Math.floor(price / 1.18);
+                                    let gst = price - course_price;
+                                    let date_now = user.date_now;
+                                    let timestamp = new Date(date_now).getTime();
+                                    // console.log(timestamp);
+                                    // show details on page
+                                    $(".user").html(user_name);
+                                    $(".course-name").html(course_name);
+                                    // add current date
+                                    // add date
+                                    let date = new Date(date_now).getDate();
+                                    let month = new Date(date_now).getMonth();
+                                    let year = new Date(date_now).getFullYear();
+                                    let newDate = date < 10 ? "0" + date : date;
+                                    let monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                                    let newMonth = monthArray[month];
+
+                                    let invoice_date = newDate + " " + newMonth + ", " + year;
+                                    template = `<table class="poppins-medium git status" style="width: 100%; margin: 0 auto;font-size: 15px;">
+                                                                <tr>
+                                                                    <td>
+                                                                        <img src="https://storage.googleapis.com/govtjobkaro_images/header.png" alt="header" width="100%">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="d-flex align-items-center justify-content-between"
+                                                                        style=" border-bottom: 2px solid #F56962; margin-top: 30px;padding-bottom: 20px;">
+                                                                        <img src="https://storage.googleapis.com/govtjobkaro_images/invoice-logo.png" alt="logo" width="205">
+                                                                        <div class="d-flex flex-column align-items-end">
+                                                                            <span>GSTIN: 03AAAFQ8372P1ZS</span>
+                                                                            <a href="https://www.govtjobkaro.com"
+                                                                                style="display: block; color: black; text-decoration: none;">www.<span
+                                                                                    style="color: #F56962;">govtjobkaro</span>.com</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="margin: 30px 0;" class="d-flex align-items-center justify-content-between">
+                                                                        <h1><b>INVOICE</b></h1>
+                                                                        <div class="d-flex align-items-end flex-column">
+                                                                            <span>Invoice Date: &nbsp;<span class="invoice-date">${invoice_date}</span></span>
+                                                                            <b>Invoice No: <span class="invoice-no">${timestamp}</span></b>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="d-flex justify-content-between mb-4">
+                                                                        <div>
+                                                                            <b style="line-height: 30px;">Bill to</b>
+                                                                            <div style="line-height: 21px;max-width: 280px;min-height: 120px;">
+                                                                                <span class="customer_name text-capitalize">${user_name}</span>,<br>
+                                                                                <span class="customer_address">${user_address}</span><br>
+                                                                                <span class="customer_mobile">${user_mobile}</span><br>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text-right">
+                                                                            <b style="line-height: 30px;">Ship to</b>
+                                                                            <div style="line-height: 21px;max-width: 280px;min-height: 120px;">
+                                                                                <span class="customer_name text-capitalize">${user_name}</span>,<br>
+                                                                                <span class="customer_address">${user_address}</span><br>
+                                                                                <span class="customer_mobile">${user_mobile}</span><br>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <b>GSTIN :</b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <table border="0" style="color: white; width: 100%; text-align: center;margin-top: 24px;">
+                                                                            <thead style="background-color: #F56962;">
+                                                                                <td style="width: 10%; padding: 6px 0; border: 1px solid black; border-bottom: 1px;">
+                                                                                    S.No
+                                                                                </td>
+                                                                                <td
+                                                                                    style="width: 40%; padding: 6px 0; border: 1px solid black; border-bottom: 1px; border-left: 1px;">
+                                                                                    ITEM
+                                                                                    DESCRIPTION</td>
+                                                                                <td
+                                                                                    style="width: 15%; padding: 6px 0; border: 1px solid black; border-bottom: 1px; border-left: 1px;">
+                                                                                    MRP
+                                                                                </td>
+                                                                                <td
+                                                                                    style="width: 15%; padding: 6px 0; border: 1px solid black; border-bottom: 1px; border-left: 1px;">
+                                                                                    QUANTITY</td>
+                                                                                <td
+                                                                                    style="width: 20%; padding: 6px 0; border: 1px solid black; border-bottom: 1px; border-left: 1px;">
+                                                                                    AMOUNT
+                                                                                </td>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td style="width: 10%; padding: 6px 0; border: 1px solid black; color: black;">
+                                                                                        1.</td>
+                                                                                    <td
+                                                                                        style="width: 40%; height: 60px; padding: 6px 0; border: 1px solid black; border-left: 1px; color: black;">
+                                                                                        <span class="course-name">${course_name}</span>
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="width: 15%; padding: 6px 0; border: 1px solid black; border-left: 1px; color: black;">
+                                                                                        ₹<span class="course-price">${course_price}</span>
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="width: 15%; padding: 6px 0; border: 1px solid black; border-left: 1px; color: black;">
+                                                                                        1</td>
+                                                                                    <td
+                                                                                        style="width: 20%; padding: 6px 0; border: 1px solid black; border-left: 1px; color: black;">
+                                                                                        ₹<span class="course-price">${course_price}</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td colspan="3"></td>
+                                                                                    <td colspan="2"
+                                                                                        style="border: 2px solid #F56962; background-color: #F56962; padding: 15px;">
+                                                                                        <div class="d-flex justify-content-between">
+                                                                                            <p style="margin-bottom: 3px;">Sub-total</p>
+                                                                                            <span>₹<span class="course-price">${course_price}</span></span>
+                                                                                        </div>
+                                                                                        <div class="d-flex justify-content-between">
+                                                                                            <p style="margin-bottom: 3px;">GST 18%</p>
+                                                                                            <span>₹<span class="gst">${gst}</span></span>
+                                                                                        </div>
+                                                                                        <div class="d-flex justify-content-between">
+                                                                                            <p style="margin-bottom: 3px;">Grand Total</p>
+                                                                                            <span>₹<span class="total-price">${course_price + gst}</span></span>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td
+                                                                        style="color: black;font-size: 14px; border-top: 2px solid #F56962; padding-top: 24px; display: grid;margin: 120px 0 20px 0; grid-template-columns: repeat(3,1fr);justify-items: center;">
+                                                                        <div class="d-flex align-items-center">
+                                                                            <img style="margin-right: 10px;" src="https://storage.googleapis.com/govtjobkaro_images/mobile.png" alt="mobile">
+                                                                            <span>+91 7717303385</span>
+                                                                        </div>
+                                                                        <div class="d-flex align-items-center" style="min-width: 300px;">
+                                                                            <img style="margin-right: 10px;" src="https://storage.googleapis.com/govtjobkaro_images/address.png" alt="address">
+                                                                            <address>
+                                                                                Mehmoodpura, House NO. 582/1,
+                                                                                Adj. Bank Street, Old
+                                                                                Madhopuri, Ludhiana, Punjab, 141008
+                                                                            </address>
+                                                                        </div>
+                                                                        <div class="d-flex align-items-center">
+                                                                            <img style="margin-right: 10px;" src="https://storage.googleapis.com/govtjobkaro_images/email.png" alt="email">
+                                                                            <a style="display: block; color: black; text-decoration: none;"
+                                                                                href="mailto:info@govtjobkaro.com">info@govtjobkaro.com</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img src="https://storage.googleapis.com/govtjobkaro_images/footer.png" alt="footer" width="100%">
+                                                                    </td>
+                                                                </tr>
+                                                            </table>`;
+                                    // download invoice
+                                    $(`#${orderId}-${val}`).on("click", () => {
+                                        // console.log(orderId);
+                                        const invoice = template;
+                                        var opt = {
+                                            margin: .25,
+                                            filename: course_name + '.pdf',
+                                            image: { type: 'jpeg', quality: 1 },
+                                            html2canvas: { dpi: 192, scale: 4, letterRendering: true, useCORS: true },
+                                            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                                        };
+                                        html2pdf().from(invoice).set(opt).save();
+                                    });
+                                } else {
+                                    alert("try again");
+                                }
+                            }
+                        });
+                    });
+
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

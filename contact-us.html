@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NB4ZFHF");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Enter a proper page title here -->
+    <title>Have a Query? Chat With us Now</title>
+
+    <!-- CSS to include bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.css" />
+    <!-- css to include style.css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- required meta tags essential for seo and link sharing -->
+
+    <!-- Enter a proper description for the page in the meta description tag -->
+    <meta
+      name="description"
+      content="Do you have any queries? Why don't you contact us using the the contact options available on this page or you can send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385"
+    />
+
+    <!-- Enter a keywords for the page in tag -->
+    <meta name="Keywords" content="ENTER_KEYWORDS_HERE" />
+
+    <!-- Enter Page title -->
+    <meta property="og:title" content="Have a Query? Chat With us Now" />
+
+    <!-- Enter Page URL -->
+    <meta property="og:url" content="https://govtjobkaro.com/contact-us" />
+
+    <!-- Enter page description -->
+    <meta
+      property=" og:description"
+      content="Do you have any queries? Why don't you contact us using the the contact options available on this page or you can send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385"
+    />
+
+    <!-- Enter Logo image URL for example : http://cryptonite.finstreet.in/images/cryptonitepost.png -->
+    <meta
+      property="og:image"
+      itemprop="image"
+      content="https://partner.govtjobkaro.com/meta-img.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      itemprop="image"
+      content="https://partner.govtjobkaro.com/meta-img.jpg"
+    />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon location for example :  images/cropped-Fin-270x270.jpg -->
+    <link rel="icon" href="images/logo without text.png" />
+
+    <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
+    <style>
+      /* fonts */
+      .poppins-regular {
+        font-family: Poppins Normal;
+        src: url(./fonts/Poppins-Regular.ttf);
+      }
+
+      .poppins-medium {
+        font-family: Poppins Medium;
+        src: url(./fonts/Poppins-Medium.ttf);
+      }
+
+      .pink-btn {
+        color: white;
+        padding: 13px 35px;
+        background-color: #f56962;
+        font-family: Poppins Normal;
+        src: url(./fonts/Poppins-Regular.ttf);
+      }
+
+      .container {
+        height: 100%;
+      }
+
+      /* contact-us */
+      .contact-us {
+        height: 525px;
+        margin: 85px auto;
+        background-color: #fef0ef;
+      }
+
+      .contact-text {
+        width: 431px;
+        line-height: 28px;
+        height: fit-content;
+      }
+
+      .contact-text h5,
+      .contact-text p {
+        color: #5f5982;
+        margin-bottom: 25px;
+      }
+
+      .contact-text h1 {
+        line-height: 60px;
+      }
+
+      .contact-image {
+        position: relative;
+        top: 90px;
+      }
+
+      .location-box {
+        width: 600px;
+        height: 550px;
+        padding-right: 40px;
+      }
+
+      .location-box-container {
+        position: relative;
+      }
+
+      .address {
+        margin: 5px 0;
+      }
+
+      .address > p {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+
+      .location-box + img {
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translateY(-50%);
+      }
+
+      .not-found-container {
+        width: 100vw;
+        height: 100vh;
+        z-index: 111111;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none;
+      }
+
+      .close-btn {
+        color: white;
+        font-size: 15px;
+        background-color: #f56962;
+      }
+
+      .not-found {
+        width: 300px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        background-color: white;
+        padding: 25px 20px 20px 20px;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 992px) {
+        .pink-btn {
+          width: 100%;
+          font-size: 14px;
+          padding: 10px 24px !important;
+        }
+
+        .contact-us {
+          height: fit-content;
+          padding: 60px 0;
+          background-color: #fef0ef;
+        }
+
+        .contact-text {
+          width: 90%;
+          text-align: center;
+        }
+
+        .contact-text h1 {
+          font-size: 36px;
+        }
+
+        .contact-image {
+          position: unset;
+          margin-top: 40px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .location-box {
+          width: 100%;
+          height: fit-content;
+          padding-right: 0px;
+        }
+
+        .location-box + img {
+          position: unset;
+          top: unset;
+          right: unset;
+          transform: unset;
+        }
+
+        .contact-us {
+          padding: 45px 0;
+        }
+
+        .contact-heading {
+          flex-direction: column;
+        }
+
+        .contact-heading .pink-btn {
+          margin-top: 10px;
+        }
+
+        .contact-text {
+          width: 100%;
+        }
+
+        .contact-text h1 {
+          font-size: 28px;
+        }
+
+        .contact-text h5 {
+          margin-bottom: 10px;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .contact-us {
+          padding: 35px 0;
+          margin: 85px 0 50px 0;
+        }
+
+        .contact-text h1 {
+          font-size: 21px;
+          line-height: 30px;
+        }
+
+        .contact-text h5 {
+          font-size: 16px;
+        }
+
+        .contact-text p {
+          width: 95%;
+          margin: 0 auto;
+          font-size: 14px;
+          line-height: 25px;
+          margin-bottom: 20px;
+        }
+
+        .contact-heading h1 {
+          font-size: 19px;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+
+        .contact-location-container {
+          margin-top: 0px;
+          margin-bottom: 50px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NB4ZFHF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      >
+      </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section class="not-found-container invalid-num-container">
+      <div
+        class="not-found d-flex align-items-center justify-content-center flex-column"
+      >
+        <!-- <img class="not-found-img" src="https://storage.googleapis.com/govtjobkaro_images/search-line.png" alt="not-found"> -->
+        <b class="poppins-regular text-center mt-4 mb-0"> Number Not Valid! </b>
+        <button class="btn poppins-medium close-btn invalid-num mt-4">
+          Try Again
+        </button>
+      </div>
+    </section>
+    <!-- cookies -->
+    <section class="cookies-container">
+      <div class="cookies-box">
+        <p class="poppins-regular text-justify mt-4">
+          We use Cookies and similar technologies ("Cookies") to provide ours
+          services to you, enhance your experience with our services and
+          customise the adverts you see, including through third parties.
+        </p>
+        <p class="poppins-regular text-justify">
+          Accept our use of cookies to continue on govtjobkaro website or to
+          watch our videos. For more information please refer to our
+          <a href="terms-and-conditions">terms & conditions.</a>
+        </p>
+        <div class="d-flex align-items-center justify-content-center">
+          <button class="btn poppins-medium cookies-btn">Accept Cookies</button>
+        </div>
+        <img
+          class="cookie-img"
+          src="https://storage.googleapis.com/govtjobkaro_images/cookie.png"
+          alt="cookie"
+        />
+      </div>
+    </section>
+    <div class="d-none d-lg-block">
+      <!-- header -->
+      <div class="header fixed-top"></div>
+
+      <!-- contact-us -->
+      <div class="container-fluid contact-us poppins-regular">
+        <div
+          class="container d-flex align-items-center justify-content-between"
+        >
+          <!-- contact-text -->
+          <div class="contact-text">
+            <!-- <h5 class="poppins-medium" style="margin-left: 5px;">CONTACT</h5> -->
+
+            <h1 style="font-weight: bold" class="poppins-medium">
+              Got a question about using GovtJobKaro?
+            </h1>
+
+            <p>
+              This is the place to start. Find the answers you need from the
+              most reliable support team
+            </p>
+
+            <button class="support-btn btn pink-btn">Contact Support</button>
+          </div>
+
+          <!-- contact-image -->
+          <div class="contact-image">
+            <img
+              src="https://storage.googleapis.com/govtjobkaro_images/contact.png"
+              alt="content"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="section5">
+        <div class="container p-2">
+          <h1 class="mt-5 mb-4 poppins-medium">
+            Join Our Notification Group Now
+          </h1>
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <div class="col-lg-12">
+                <h4 class="poppins-medium" style="line-height: 35px">
+                  Life mein kabhi Mat Daro <br />
+                  Bas Government Job Karo
+                </h4>
+                <p style="color: #5f5982" class="poppins-regular">
+                  To stay updated and learn about the latest Job Updates join
+                  our telegram group Now
+                </p>
+              </div>
+              <div
+                id="tick"
+                class="mt-3 d-flex align-items-top justify-content-between flex-column"
+              >
+                <div class="col-lg-12">
+                  <div class="pr-2 pt-2 pb-2 mt-1 d-flex align-items-top">
+                    <img
+                      style="width: 25px; height: 25px"
+                      class="mr-2"
+                      alt="tickicon"
+                      src="https://storage.googleapis.com/govtjobkaro_images/tick.png"
+                    />
+                    <div>Free Live Notifications of Every Job Opportunity</div>
+                  </div>
+                  <div class="pr-2 pt-2 pb-2 mt-1 d-flex align-items-top">
+                    <img
+                      style="width: 25px; height: 25px"
+                      class="mr-2"
+                      alt="tickicon"
+                      src="https://storage.googleapis.com/govtjobkaro_images/tick.png"
+                    />
+                    <div>
+                      Live Form Filling Guidance for every Job opportunity
+                    </div>
+                  </div>
+
+                  <div class="pr-2 pt-2 pb-2 mt-1 d-flex align-items-top">
+                    <img
+                      style="width: 25px; height: 25px"
+                      class="mr-2"
+                      alt="tickicon"
+                      src="https://storage.googleapis.com/govtjobkaro_images/tick.png"
+                    />
+                    <div>More than a 100 Mock tests to practice from</div>
+                  </div>
+                  <button
+                    class="pr-2 pt-2 pb-2 pl-4 pr-4 btn pink-btn mt-4 telegram"
+                    type="submit"
+                  >
+                    Join the Telegram Group Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <img
+              src="https://storage.googleapis.com/govtjobkaro_images/contact-two.png"
+              alt="group"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- address three -->
+      <h1
+        class="poppins-medium container"
+        style="margin-top: 80px; margin-bottom: 80px"
+      >
+        Need to Talk to us Personally? Come Visit us at
+      </h1>
+      <div class="container location-box-container">
+        <div class="location-box" style="background-color: #fef0ef">
+          <div
+            class="h-100 p-5 location-text d-flex align-items-left flex-column justify-content-center"
+          >
+            <h1 class="mb-4 poppins-medium">Ludhiana, Punjab</h1>
+
+            <div
+              class="address poppins-regular d-flex align-items-center justify-content-between"
+            >
+              <img
+                class="mr-2"
+                src="https://storage.googleapis.com/govtjobkaro_images/Layer 2 (2).svg"
+                alt=""
+              />
+              <p>
+                SCF14 Urban estate Phase II, Jamalpur, Ludhiana, Punjab 141010
+              </p>
+            </div>
+            <div class="address poppins-regular d-flex align-items-center">
+              <img
+                class="mr-2"
+                src="https://storage.googleapis.com/govtjobkaro_images/Layer 2 (2).svg"
+                alt=""
+              />
+              <p>+91 7717303385</p>
+            </div>
+            <div class="address poppins-regular d-flex align-items-center">
+              <img
+                class="mr-2"
+                src="https://storage.googleapis.com/govtjobkaro_images/Layer 2 (2).svg"
+                alt=""
+              />
+              <p>info@govtjobkaro.com</p>
+            </div>
+            <button
+              style="max-width: fit-content; padding: 10px 25px"
+              class="location-btn mt-4 btn pink-btn"
+            >
+              Visit Us Now
+            </button>
+          </div>
+        </div>
+        <img
+          src="https://storage.googleapis.com/govtjobkaro_images/add1.png"
+          alt="add1"
+        />
+      </div>
+
+      <div
+        class="container every-one poppins-medium d-flex justify-content-center flex-column text-center"
+      >
+        <h2 class="mt-5">Every one deserves a chance</h2>
+        <h6>
+          Join now to receive personalised notifications about the Latest
+          Government Jobs
+        </h6>
+        <div
+          class="d-flex"
+          style="max-width: fit-content; margin: 20px auto 60px auto"
+        >
+          <input
+            style="width: 265px; height: 42px"
+            type="text"
+            class="p-2 pl-4 pr-4 poppins-regular form-control"
+            placeholder="Enter your phone number"
+            id="phonenumber"
+          />
+          <button class="p-2 pl-4 pr-4 btn pink-btn" type="submit" id="sendIt">
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <!-- offers and deals -->
+      <div class="offers-deals"></div>
+
+      <!-- footer -->
+      <div class="footer"></div>
+    </div>
+
+    <!-- mobile view -->
+    <div class="d-lg-none position-relative">
+      <!-- header -->
+      <div class="header-mobile"></div>
+      <div class="navbar-bottom fixed-bottom"></div>
+
+      <!-- contact-us -->
+      <div class="container-fluid contact-us poppins-regular mt-0">
+        <div
+          class="container d-flex flex-column align-items-center justify-content-between"
+        >
+          <!-- contact-text -->
+          <div class="contact-text">
+            <!-- <h5 class="poppins-medium" style="margin-left: 5px;">CONTACT</h5> -->
+
+            <h1 style="font-weight: bold" class="poppins-medium">
+              Got a question about using GovtJobKaro?
+            </h1>
+
+            <!-- contact-image -->
+            <div class="contact-image">
+              <img
+                width="100%"
+                src="https://storage.googleapis.com/govtjobkaro_images/contact.png"
+                alt="content"
+              />
+            </div>
+
+            <p class="mt-4">
+              This is the place to start. Find the answers you need from the
+              most reliable support team
+            </p>
+
+            <button class="w-100 support-btn btn pink-btn">
+              Contact Support
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section5">
+        <div class="container p-2">
+          <div
+            class="d-flex align-items-center justify-content-between flex-column"
+          >
+            <div class="col-lg-12">
+              <h3 style="font-size: 21px" class="text-center poppins-medium">
+                Join Our Notification Group Now
+              </h3>
+              <img
+                class="col-lg-12 p-0"
+                src="https://storage.googleapis.com/govtjobkaro_images/contact-two.png"
+                alt="group"
+              />
+              <h4
+                style="font-size: 18px"
+                class="mt-3 text-center poppins-medium"
+              >
+                Life mein kabhi Mat Daro <br />
+                Bas Government Job Karo
+              </h4>
+              <p style="color: #5f5982" class="poppins-regular text-center">
+                To stay updated and learn about the latest Job Updates join our
+                telegram group Now
+              </p>
+            </div>
+          </div>
+          <div
+            id="tick"
+            class="mt-3 d-flex align-items-top justify-content-between flex-column"
+          >
+            <div class="col-lg-12">
+              <div
+                class="p-2 mt-1 d-flex align-items-top justify-content-between"
+              >
+                <img
+                  style="width: 25px; height: 25px"
+                  class="mr-2"
+                  alt="tickicon"
+                  src="https://storage.googleapis.com/govtjobkaro_images/tick.png"
+                />
+                <div>Free Live Notifications of Every Job Opportunity</div>
+              </div>
+              <div
+                class="p-2 mt-1 d-flex align-items-top justify-content-between"
+              >
+                <img
+                  style="width: 25px; height: 25px"
+                  class="mr-2"
+                  alt="tickicon"
+                  src="https://storage.googleapis.com/govtjobkaro_images/tick.png"
+                />
+                <div>Live Form Filling Guidance for every Job opportunity</div>
+              </div>
+
+              <div
+                class="p-2 mt-1 d-flex align-items-top justify-content-between"
+              >
+                <img
+                  style="width: 25px; height: 25px"
+                  class="mr-2"
+                  alt="tickicon"
+                  src="https://storage.googleapis.com/govtjobkaro_images/tick.png"
+                />
+                <div>More than a 100 Mock tests to practice from</div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center" style="padding: 0 15px">
+            <button class="btn pink-btn mt-4 telegram" type="submit">
+              Join the Telegram Group Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- address three -->
+      <h1
+        class="poppins-medium container text-center"
+        style="margin-top: 40px; margin-bottom: 40px; font-size: 21px"
+      >
+        Need to Talk to us Personally? <br />
+        Come Visit us at
+      </h1>
+      <div
+        class="container p-0 mb-5 location-box-container d-flex flex-column-reverse"
+      >
+        <div class="location-box" style="background-color: #fef0ef">
+          <div
+            class="h-100 p-4 location-text d-flex align-items-left flex-column justify-content-center"
+          >
+            <h1 style="font-size: 21px" class="text-center mb-4 poppins-medium">
+              Ludhiana, Punjab
+            </h1>
+
+            <div
+              class="address poppins-regular d-flex align-items-center justify-content-between"
+            >
+              <img
+                class="mr-2"
+                src="https://storage.googleapis.com/govtjobkaro_images/Layer 2 (2).svg"
+                alt=""
+              />
+              <p>
+                SCF14 Urban estate Phase II, Jamalpur, Ludhiana, Punjab 141010
+              </p>
+            </div>
+            <div class="address poppins-regular d-flex align-items-center">
+              <img
+                class="mr-2"
+                src="https://storage.googleapis.com/govtjobkaro_images/Layer 2 (2).svg"
+                alt=""
+              />
+              <p>+91 7717303385</p>
+            </div>
+            <div class="address poppins-regular d-flex align-items-center">
+              <img
+                class="mr-2"
+                src="https://storage.googleapis.com/govtjobkaro_images/Layer 2 (2).svg"
+                alt=""
+              />
+              <p>info@govtjobkaro.com</p>
+            </div>
+            <button class="mt-4 btn pink-btn location-btn">Visit Us Now</button>
+          </div>
+        </div>
+        <img
+          width="100%"
+          src="https://storage.googleapis.com/govtjobkaro_images/add1.png"
+          alt="add1"
+        />
+      </div>
+
+      <div
+        class="container every-one poppins-medium d-flex justify-content-center flex-column text-center"
+      >
+        <h2 class="mt-0" style="font-size: 21px">
+          Every one deserves a chance
+        </h2>
+        <h6 style="color: #5f5982; font-size: 14px">
+          Join now to receive personalised notifications about the Latest
+          Government Jobs
+        </h6>
+        <div
+          class="w-100 d-flex flex-column"
+          style="padding: 0 10px; margin: 10px auto 40px auto"
+        >
+          <input
+            style="width: 100%"
+            type="text"
+            class="mb-2 poppins-regular text-center form-control"
+            placeholder="Enter your phone number"
+            id="phonenumberMob"
+          />
+          <button class="btn pink-btn" type="submit" id="sendItMob">
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <!-- offers and deals -->
+      <div class="offers-deals"></div>
+
+      <!-- footer -->
+      <div class="footer"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(".header").load("template/header.html");
+      $(".offers-deals").load("template/offers-deals.html");
+      $(".footer").load("template/footer.html");
+      // mobile
+      $(".header-mobile").load("template/header-mobile.html");
+      $(".navbar-bottom").load("template/test-nav-bottom.html");
+
+      $(".invalid-num").click(function () {
+        $(".invalid-num-container").fadeOut();
+      });
+      // header animation
+      $(window).scroll(function () {
+        var sticky = $(".header"),
+          scroll = $(window).scrollTop();
+
+        if (scroll >= 100) {
+          sticky.addClass("fixed shadow");
+        } else {
+          sticky.removeClass("fixed shadow");
+        }
+      });
+
+      $(".support-btn").on("click", () => {
+        window.location.href =
+          "https://wa.me/917717303385/?text=Hello%2C%20I%20have%20a%20query%20regarding%20the%20course";
+      });
+
+      $(".telegram").on("click", () => {
+        window.location.href = "https://telegram.me/govtjobkaro";
+      });
+
+      $(".location-btn").on("click", () => {
+        window.location.href = "https://goo.gl/maps/UdMxhkWccbTAkZB58";
+      });
+
+      $("#sendIt").on("click", function (e) {
+        e.preventDefault();
+        var error = "";
+        var mobile = $("#phonenumber").val();
+        if (mobile == "" || mobile.length !== 10) {
+          $(".invalid-num-container").fadeIn();
+          $("#phonenumber").css("border-color", "red");
+          $("#phonenumber").css("border-width", "2px");
+          error = error + "mobile";
+        } else {
+          $("#phonenumber").css("border-color", "#BCE0FD");
+          $("#phonenumber").css("border-width", "1px");
+        }
+
+        if (error == "") {
+          $.ajax({
+            type: "POST",
+            url: "php/submitNum.php",
+            dataType: "json",
+            data: {
+              mobile: mobile,
+            },
+            success: function (obj) {
+              if (obj.status == "success") {
+                localStorage.setItem("mobile-number", mobile);
+                window.location = "notification-page-newuser";
+              } else if (obj.status == "failure") {
+                localStorage.setItem("mobile-number", mobile);
+                window.location = "notification-page-userexists";
+              }
+            },
+            error: function () {
+              alert(
+                "Sorry, there is problem at our end! we are trying to fix it!"
+              );
+            },
+          });
+        }
+      });
+
+      $("#sendItMob").on("click", function (e) {
+        e.preventDefault();
+        var error = "";
+        var mobile = $("#phonenumberMob").val();
+        if (mobile == "" || mobile.length !== 10) {
+          $(".invalid-num-container").fadeIn();
+          $("#phonenumberMob").css("border-color", "red");
+          $("#phonenumberMob").css("border-width", "2px");
+          error = error + "mobile";
+        } else {
+          $("#phonenumberMob").css("border-color", "#BCE0FD");
+          $("#phonenumberMob").css("border-width", "1px");
+        }
+
+        if (error == "") {
+          $.ajax({
+            type: "POST",
+            url: "php/submitNum.php",
+            dataType: "json",
+            data: {
+              mobile: mobile,
+            },
+            success: function (obj) {
+              if (obj.status == "success") {
+                window.location = "notification-page-newuser";
+                localStorage.setItem("mobile-number", mobile);
+              } else if (obj.status == "failure") {
+                window.location = "notification-page-userexists";
+                localStorage.setItem("mobile-number", mobile);
+              }
+            },
+            error: function () {
+              alert(
+                "Sorry, there is problem at our end! we are trying to fix it!"
+              );
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

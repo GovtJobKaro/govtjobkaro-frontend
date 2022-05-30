@@ -1,0 +1,105 @@
+<nav class="mobile-bottom-nav">
+	<div class="mobile-bottom-nav__item">
+		<div class="mobile-bottom-nav__item-content">
+			<!-- <img src="https://storage.googleapis.com/govtjobkaro_images/home-24px.png" alt="home"> -->
+			<img src="./images/home.png" alt="" srcset="">
+			<a href="">Home</a>
+		</div>
+	</div>
+	<div class="mobile-bottom-nav__item">
+		<div class="mobile-bottom-nav__item-content">
+			<!-- <img src="https://storage.googleapis.com/govtjobkaro_images/about us.png" alt="about"> -->
+			<img src="./images/about-us.png" alt="" srcset="">
+			<a href="">About us</a>
+		</div>
+	</div>
+	<div class="mobile-bottom-nav__item">
+		<div class="mobile-bottom-nav__item-content">
+			<img src="./images/courses.png" alt="courses">
+			<!-- <img src="./images/home.png" alt="" srcset=""> -->
+			<a href="">Courses</a>
+		</div>
+	</div>
+	<div class="mobile-bottom-nav__item">
+		<div class="mobile-bottom-nav__item-content">
+			<!-- <img src="https://storage.googleapis.com/govtjobkaro_images/partner with us.png" alt="partner"> -->
+			<img src="./images/partner.png" alt="" srcset="">
+			<a>Partner With Us</a>
+		</div>
+	</div>
+	<div class="mobile-bottom-nav__item">
+		<div class="mobile-bottom-nav__item-content">
+			<!-- <img src="https://storage.googleapis.com/govtjobkaro_images/contact us.png" alt="contact"> -->
+			<img src="./images/contact-us.png" alt="" srcset="">
+			<a href="">Contact Us</a>
+		</div>
+	</div>
+</nav>
+
+<style>
+	/*Bottom Navbar*/
+	.mobile-bottom-nav {
+		z-index: 1000;
+		position: fixed;
+		bottom: 0;
+
+		width: 100%;
+		padding: 5px 0;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		background-color: white;
+		box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+	}
+
+	/* mobile-bottom-nav a */
+	.mobile-bottom-nav a {
+		color: black;
+		font-family: "Poppins Normal";
+		src: url("../fonts/Poppins-Regular.ttf");
+	}
+
+	.mobile-bottom-nav__item {
+		flex-grow: 1;
+		text-align: center;
+		font-size: 12px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.mobile-bottom-nav__item--active {
+		color: rgb(226, 40, 71);
+	}
+
+	.mobile-bottom-nav__item-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.mobile-bottom-nav__item-content img {
+		width: 25px;
+		margin: 2px 0;
+	}
+</style>
+
+<script>
+	// mobile navbar-bottom
+	$('.navbar-bottom').addClass('navbar-fixed-bottom');
+
+	// for mobile bottom nav
+	var navItems = document.querySelectorAll(".mobile-bottom-nav__item");
+	navItems.forEach(function (e, i) {
+		e.addEventListener("click", function (e) {
+			navItems.forEach(function (e2, i2) {
+				e2.classList.remove("mobile-bottom-nav__item--active");
+			})
+			this.classList.add("mobile-bottom-nav__item--active");
+		});
+	});
+</script>

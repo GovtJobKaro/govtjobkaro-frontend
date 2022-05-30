@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NB4ZFHF");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Enter a proper page title here -->
+    <title>Oops! You seem to have landed on a wrong Page</title>
+
+    <!-- CSS to include bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- css to include style.css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- required meta tags essential for seo and link sharing -->
+
+    <!-- Enter a proper description for the page in the meta description tag -->
+    <meta
+      name="description"
+      content="We are sorry You seem to have landed on the wrong page. If this Problem Continues please send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385"
+    />
+
+    <!-- Enter a keywords for the page in tag -->
+    <meta name="Keywords" content="ENTER_KEYWORDS_HERE" />
+
+    <!-- Enter Page title -->
+    <meta
+      property="og:title"
+      content="Oops! You seem to have landed on a wrong Page"
+    />
+
+    <!-- Enter Page URL -->
+    <meta property="og:url" content="https://govtjobkaro.com/404" />
+
+    <!-- Enter page description -->
+    <meta
+      property="og:description"
+      content="We are sorry You seem to have landed on the wrong page. If this Problem Continues please send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385"
+    />
+
+    <!-- Enter Logo image URL for example : http://cryptonite.finstreet.in/images/cryptonitepost.png -->
+    <meta
+      property="og:image"
+      itemprop="image"
+      content="https://partner.govtjobkaro.com/meta-img.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      itemprop="image"
+      content="https://partner.govtjobkaro.com/meta-img.jpg"
+    />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon location for example :  images/cropped-Fin-270x270.jpg -->
+    <link rel="icon" href="images/logo without text.png" />
+
+    <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
+    <style>
+      /* fonts */
+      .poppins-regular {
+        font-family: Poppins Normal;
+        src: url(./fonts/Poppins-Regular.ttf);
+      }
+
+      .poppins-medium {
+        font-family: Poppins Medium;
+        src: url(./fonts/Poppins-Medium.ttf);
+      }
+
+      .pink-btn {
+        color: white;
+        padding: 13px 35px;
+        background-color: #f56962;
+        font-family: Poppins Medium;
+        src: url(./fonts/Poppins-Medium.ttf);
+      }
+
+      .container {
+        height: 100%;
+      }
+
+      /* page-not-found-heading */
+      .page-not-found-heading {
+        position: relative;
+        height: 277px;
+        margin-top: 85px;
+        background-color: #feefee;
+      }
+
+      .page-not-found-heading img {
+        position: absolute;
+        top: 80px;
+        right: -55px;
+        transform: rotate(90deg);
+      }
+
+      .page-not-found-heading h1 {
+        color: #302d3a;
+        font-size: 36px;
+        margin-bottom: 0;
+      }
+
+      .page-not-found-heading h5 {
+        color: #302d3a;
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+
+      .page-not-found-heading h5 span {
+        color: #5f5982;
+      }
+
+      /* back-to-home */
+      .back-to-home {
+        width: 1060px;
+        margin: 80px auto;
+      }
+
+      .back-to-home h1 {
+        font-size: 36px;
+        text-transform: capitalize;
+      }
+
+      .back-to-home h4 {
+        color: #5f5982;
+        font-size: 21px;
+        margin: 40px 0;
+      }
+
+      .back-to-home img {
+        margin-top: 80px;
+      }
+
+      .not-found-container {
+        width: 100vw;
+        height: 100vh;
+        z-index: 111111;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none;
+      }
+
+      .close-btn {
+        color: white;
+        font-size: 15px;
+        background-color: #f56962;
+      }
+
+      .not-found {
+        width: 300px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        background-color: white;
+        padding: 25px 20px 20px 20px;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 992px) {
+        .back-to-home img {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 756px) {
+        .pink-btn {
+          font-size: 14px;
+          padding: 7px 15px;
+        }
+
+        .page-not-found-heading {
+          height: 185px;
+        }
+
+        .page-not-found-heading h1 {
+          font-size: 26px;
+        }
+
+        .page-not-found-heading h5 {
+          font-size: 14px;
+        }
+
+        .page-not-found-heading img {
+          height: 75px;
+          right: -40px;
+        }
+
+        .back-to-home h1 {
+          font-size: 28px;
+        }
+
+        .back-to-home h4 {
+          color: #5f5982;
+          font-size: 16px;
+          margin: 25px 0;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .page-not-found-heading h1 {
+          font-size: 21px;
+        }
+
+        .page-not-found-heading {
+          height: 120px;
+        }
+
+        .back-to-home {
+          width: 100%;
+          margin: 50px auto;
+        }
+
+        .back-to-home h1 {
+          font-size: 24px;
+        }
+
+        .back-to-home h4 {
+          font-size: 13px;
+          margin: 20px 0;
+        }
+
+        .page-not-found-heading img {
+          height: 60px;
+          right: -35px;
+          top: 0px;
+        }
+
+        .back-to-home img {
+          margin-top: 60px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NB4ZFHF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      >
+      </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section class="not-found-container invalid-num-container">
+      <div
+        class="not-found d-flex align-items-center justify-content-center flex-column"
+      >
+        <!-- <img class="not-found-img" src="https://storage.googleapis.com/govtjobkaro_images/search-line.png" alt="not-found"> -->
+        <b class="poppins-regular text-center mt-4 mb-0"> Number Not Valid! </b>
+        <button class="btn poppins-medium close-btn invalid-num mt-4">
+          Try Again
+        </button>
+      </div>
+    </section>
+    <div class="d-none d-lg-block">
+      <!-- header -->
+      <div class="header fixed-top"></div>
+
+      <!-- page-not-found-heading -->
+      <div class="container-fluid page-not-found-heading">
+        <div
+          class="container d-flex align-items-center justify-content-between"
+        >
+          <h1 style="font-weight: bold" class="poppins-medium">
+            Page not found
+          </h1>
+          <h5 class="poppins-regular">Home <span>/ 404</span></h5>
+        </div>
+        <img
+          src="https://storage.googleapis.com/govtjobkaro_images/Pattern.svg"
+          alt="Pattern"
+        />
+      </div>
+
+      <div class="container back-to-home text-center">
+        <h1 class="poppins-medium">Page not found</h1>
+        <h4 class="poppins-regular">
+          The Page You Are Attempting To Reach Is Currently Not Available. This
+          May Be Because The Page Does Not Exist Or Has Been Moved.
+        </h4>
+        <button onclick="window.location='/'" class="btn pink-btn">
+          Back to Home
+        </button>
+
+        <img
+          src="https://storage.googleapis.com/govtjobkaro_images/13.svg"
+          alt="image"
+        />
+      </div>
+
+      <!-- footer -->
+      <div class="footer"></div>
+    </div>
+
+    <!-- mobile view -->
+    <div class="d-lg-none position-relative">
+      <!-- header -->
+      <div class="header-mobile"></div>
+      <div class="navbar-bottom fixed-bottom"></div>
+
+      <!-- page-not-found-heading -->
+      <div
+        class="container-fluid pt-2 text-center"
+        style="background-color: #f569621a"
+      >
+        <div class="container align-items-center mt-2 justify-content-between">
+          <h1 style="font-size: 30px" class="poppins-medium">
+            <strong>Page not found</strong>
+          </h1>
+          <h4
+            class="poppins-regular mt-4 mb-4"
+            style="font-size: 16px; color: #5f5982"
+          >
+            The Page You Are Attempting To Reach Is Currently Not Available.
+            This May Be Because The Page Does Not Exist Or Has Been Moved.
+          </h4>
+
+          <img
+            src="https://storage.googleapis.com/govtjobkaro_images/13.svg"
+            class="pb-3"
+            style="width: 100%"
+            alt="image"
+          />
+
+          <!-- <h5 class="poppins-regular">Home <span>/ 404</span></h5> -->
+        </div>
+        <!-- <img src="https://storage.googleapis.com/govtjobkaro_images/Pattern.svg" alt=""> -->
+      </div>
+      <div class="container mt-4 mb-4">
+        <button
+          class="poppins-medium btn btn-primary"
+          style="
+            background-color: #f56962;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            font-size: 15px;
+          "
+          onclick="window.location='/'"
+        >
+          Click to Go to Home
+        </button>
+        <div class="poppins-medium container text-center mt-3">
+          <h3 style="font-size: 26px">Everyone deserves a chance</h3>
+          <h5 style="color: #5f5982; font-size: 18px; margin: 10px 0 20px 0">
+            Join now to receive personalised notifications about the Latest
+            Government Jobs
+          </h5>
+        </div>
+        <input
+          class="poppins-regular"
+          id="phonenumber"
+          type="text"
+          placeholder="Enter Your Mobile Number"
+          style="
+            width: 100%;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid rgb(197, 192, 192);
+            text-align: center;
+          "
+        />
+
+        <button
+          class="btn poppins-regular btn-primary mt-2"
+          style="
+            background-color: #f56962;
+            width: 100%;
+            border: none;
+            font-size: 15px;
+            padding: 10px;
+          "
+          id="sendIt"
+        >
+          Submit
+        </button>
+      </div>
+      <!-- <div class="container back-to-home text-center ">
+            <h1 class="poppins-medium">Page not found</h1> -->
+
+      <!-- footer -->
+      <div class="footer"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(".header").load("template/header.html");
+      $(".footer").load("template/footer.html");
+      // mobile
+      $(".header-mobile").load("template/header-mobile.html");
+      $(".navbar-bottom").load("template/test-nav-bottom.html");
+
+      $(".invalid-num").click(function () {
+        $(".invalid-num-container").fadeOut();
+      });
+
+      // header animation
+      $(window).scroll(function () {
+        var sticky = $(".header"),
+          scroll = $(window).scrollTop();
+
+        if (scroll >= 100) {
+          sticky.addClass("fixed shadow");
+        } else {
+          sticky.removeClass("fixed shadow");
+        }
+      });
+
+      $("#sendIt").on("click", function (e) {
+        e.preventDefault();
+        var error = "";
+        var mobile = $("#phonenumber").val();
+        if (mobile == "" || mobile.length !== 10) {
+          $(".invalid-num-container").fadeIn();
+          $("#phonenumber").css("border-color", "red");
+          $("#phonenumber").css("border-width", "2px");
+          error = error + "mobile";
+        } else {
+          $("#phonenumber").css("border-color", "#BCE0FD");
+          $("#phonenumber").css("border-width", "1px");
+        }
+
+        if (error == "") {
+          $.ajax({
+            type: "POST",
+            url: "php/submitNum.php",
+            dataType: "json",
+            data: {
+              mobile: mobile,
+            },
+            success: function (obj) {
+              if (obj.status == "success") {
+                localStorage.setItem("mobile-number", mobile);
+                window.location = "notification-page-newuser";
+              } else if (obj.status == "failure") {
+                localStorage.setItem("mobile-number", mobile);
+                window.location = "notification-page-userexists";
+              }
+            },
+            error: function () {
+              alert(
+                "Sorry, there is problem at our end! we are trying to fix it!"
+              );
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

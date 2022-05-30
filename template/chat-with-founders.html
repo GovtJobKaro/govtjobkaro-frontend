@@ -1,0 +1,131 @@
+<div class="container-fluid pt-2 pb-2 mt-5" style="background-color: #EFEFF6;">
+    <div class="meet-your-teachers founder container">
+        <h1 class="poppins-medium heading-founders">Have a chat with the Founders</h1>
+
+        <div id="teachers-m">
+            <div class="teachers-container founder-container">
+                <div class="teachers-card mt-5 mt-lg-0">
+                    <div class="top deepak_sir">
+                        <img class="teacher-img " src="./images/deepak_sir.png" alt="card1">
+                    </div>
+                    <div class="bottom text-justify">
+                        <h3 class="text-center">Deepak Goyal</h3>
+                        <p style="color: #5F5982;" class="para-founders">
+                            Co-Founder of GovtJobKaro. He has been working in the education sector for the past 12 and
+                            has
+                            aided more than 1,00,000
+                            students to get into their dream college with his company Edusquare.
+                        </p>
+                    </div>
+                </div>
+                <div class="teachers-card mt-5 mt-lg-0">
+                    <div class="top bandhul_sir">
+                        <img class="teacher-img" src="./images/bandhul_sir.png" alt="card1">
+                    </div>
+                    <div class="bottom text-justify">
+                        <h3 class="text-center">Bandhul Bansal</h3>
+                        <p style="color: #5F5982;" class="para-founders">
+                            Co-Founder of GovtJobKaro. He Has been working in the financial education and Tech industry
+                            for
+                            the past 5 Years, His
+                            Companies Finstreet and QuadbTechnologies have helped more than 50,000 aspirants attain
+                            financial freedom through
+                            education
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="teachers-card">
+                    <div class="top" style="background-color: #F68C20;">
+                        <img class="teacher-img" src="https://via.placeholder.com/238x375" alt="card1">
+                    </div>
+                    <div class="bottom text-center text-lg-left">
+                        <h3>Demetri Caron</h3>
+                        <p>
+                            Learn Adobe Illustrator CC graphic design, logo design, and more with this in-depth,
+                            practical,
+                            easy-to-follow course!
+                        </p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="container mt-3 d-flex justify-content-center">
+            <button id="know" class="btn pink-btn know-more-desk" type="submit"
+                onclick="window.location='about-us'">Know
+                more about
+                GovtJobKaro</button>
+
+            <button id="know" class="btn pink-btn know-more" type="submit" onclick="window.location='about-us'"
+                style="width: 100vw;display: none;padding: 10px 0px;">Know
+                more about
+                GovtJobKaro</button>
+        </div>
+    </div>
+</div>
+<script>
+    if (screen.width < 800) {
+        $('.know-more').show();
+        $('.know-more-desk').hide();
+        $('.heading-founders').css('font-size', '32px');
+    }
+</script>
+<style>
+    /* founder-container */
+    .founder-container {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teachers-card .top {
+        width: 238px;
+        height: 255px;
+        margin: 0 auto;
+    }
+
+    .teachers-card .top img {
+        width: 100%;
+        height: auto;
+    }
+
+    .deepak_sir {
+        background-color: #06B47E;
+        /* background-position: bottom;
+        background-repeat: no-repeat;
+        background-image: url(./images/deepak_sir.png); */
+    }
+
+    .bandhul_sir {
+        background-color: #5E5881;
+        /* background-position: bottom;
+        background-repeat: no-repeat;
+        background-image: url(./images/bandhul_sir.png); */
+    }
+
+    @media (max-width: 475px) {
+        #know {
+            margin-bottom: 40px;
+        }
+
+        /* 
+        .meet-your-teachers h1 {
+            font-size: 24px !important;
+        } */
+    }
+
+    @media (max-width: 425px) {
+        .founder-container {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .founder.container {
+            padding: 0 !important;
+        }
+
+        .para-founders {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+</style>

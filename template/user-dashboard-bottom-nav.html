@@ -1,0 +1,218 @@
+<section class="bottom-nav">
+    <!-- nav-bottom -->
+    <nav class="nav-bottom mt-0 d-flex align-items-center justify-content-around">
+        <div id="myCourses" class="nav-item" style="width:20vw" onclick="myCourses()">
+            <div class="d-flex align-items-center justify-content-center flex-column" class="nav-button">
+
+                <img id="my-courses-img" src="https://storage.googleapis.com/govtjobkaro_images/book-open-black.svg" alt="my-courses" class="mb-2 d-none">
+                <img id="my-courses-img-pink" src="https://storage.googleapis.com/govtjobkaro_images/book-open-pink.svg" alt="my-courses" class="mb-2">
+                <a class="poppins-medium courses-text" style="font-size: 10px;color: #F56962;">My courses</a>
+
+
+            </div>
+        </div>
+        <div id="invoice" class="nav-item" style="width:20vw" onclick="invoice()">
+            <div class="d-flex align-items-center justify-content-center flex-column" class="nav-button">
+                <img id="invoice-img" src="https://storage.googleapis.com/govtjobkaro_images/invoice-black.svg" alt="invoice" class="mb-2">
+                <img id="invoice-img-pink" src="https://storage.googleapis.com/govtjobkaro_images/invoice-pink.svg" alt="invoice" class="mb-2 d-none">
+                <a class="poppins-medium invoice-text" style="font-size: 10px;">Invoice</a>
+            </div>
+        </div>
+        <div id="liveSessions" class="nav-item" style="width:20vw" onclick="liveSessions()">
+            <div class="d-flex align-items-center justify-content-center flex-column" class="nav-button">
+                <img id="live-session-img" src="https://storage.googleapis.com/govtjobkaro_images/live-session-black.svg" alt="live-session" class="mb-2">
+                <img id="live-session-img-pink" src="https://storage.googleapis.com/govtjobkaro_images/live-session-pink.svg" alt="live-session"
+                    class="mb-2 d-none">
+                <a class="poppins-medium live-text" style="font-size: 10px;">Live Sessions</a>
+            </div>
+        </div>
+        <div class="nav-item mt-1" style="width:20vw" onclick="announcement()" id="announcement">
+            <div class="d-flex align-items-center justify-content-center flex-column" class="nav-button">
+                <img id="announcement-img" src="https://storage.googleapis.com/govtjobkaro_images/information-black.svg" alt="announcement"
+                    style="margin-top: -4px;margin-bottom: 3px;">
+                <img id="announcement-img-pink" src="https://storage.googleapis.com/govtjobkaro_images/information-pink.svg" alt="announcement" class="d-none"
+                    style="margin-top: -4px;margin-bottom: 3px;">
+                <a class="poppins-medium anno-text" style="font-size: 10px;">Announcement</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- sign-status -->
+    <a style="display: block;" id="sign-status" class="poppins-regular">Hi <span id="nameForNavBottom"
+            class="text-capitalize">FirstName!</span>
+        <span onclick="window.location='https://telegram.me/govtjobkaro'">Click here to join Notification
+            Group
+        </span>
+    </a>
+</section>
+
+<style>
+    .nav-single-course {
+        position: relative;
+        bottom: -25px;
+    }
+
+    .nav-single-course p {
+        font-size: 11px;
+        margin-bottom: 0;
+        font-weight: lighter;
+    }
+
+    .nav-single-course img {
+        width: 20px;
+    }
+
+    .whatsapp {
+        width: 50%;
+        color: white;
+        padding: 12px 10px 40px;
+        background-color: #6C63FF;
+    }
+
+    .add-to-cart {
+        width: 50%;
+        color: white;
+        padding: 12px 10px 40px;
+        background-color: #43C8B1;
+    }
+
+    .nav-bottom {
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        padding: 8px 15px 6px 15px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        background-color: white;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    div img+a {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .nav-bottom .nav-item .active {
+        color: #F56962;
+    }
+
+    #home-img,
+    #contact-us-img {
+        height: 22px;
+    }
+
+    #home-img,
+    #partner-img,
+    #contact-us-img {
+        margin-bottom: 5px;
+    }
+
+    /* sign-status */
+    #sign-status {
+        color: white;
+        font-size: 14px;
+        margin-bottom: 0;
+        padding: 15px 0;
+        text-align: center;
+        background-color: #F56962;
+        width: 100vw;
+    }
+</style>
+<script>
+    $.ajax({
+        type: 'POST',
+        url: 'php/userInfo.php',
+        dataType: "json",
+        async: false,
+        data: {
+            token: value
+        },
+        success: function (obj) {
+            if (obj.status == 'success') {
+                $('#nameForNavBottom').html(obj.User.full_name + '!');
+            } else if (obj.status == 'failure') {
+                function delete_cookie(name) {
+                    document.cookie =
+                        name + "=; Domain=govtjobkaro.com; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+                }
+                delete_cookie("token");
+            } else {
+                console.log('internet issue');
+            }
+        }
+    });
+    function myCourses() {
+        $('#courses-m').click();
+        $('.courses-text').css('color', '#F56962');
+        $('.invoice-text').css('color', 'black');
+        $('.live-text').css('color', 'black');
+        $('.anno-text').css('color', 'black');
+        $('#my-courses-img').addClass('d-none');
+        $('#my-courses-img-pink').removeClass('d-none');
+        $('#invoice-img-pink').addClass('d-none');
+        $('#invoice-img').removeClass('d-none');
+        $('#live-session-img').removeClass('d-none');
+        $('#live-session-img-pink').addClass('d-none');
+        $('#announcement-img').removeClass('d-none');
+        $('#announcement-img-pink').addClass('d-none');
+        $('html,body').animate({
+            scrollTop: $("#courses-tab-m").offset().top
+        }, 'slow');
+    }
+    function invoice() {
+        $('#invoice-m').click();
+        $('.courses-text').css('color', 'black');
+        $('.invoice-text').css('color', '#F56962');
+        $('.live-text').css('color', 'black');
+        $('.anno-text').css('color', 'black');
+        $('#invoice-img').addClass('d-none');
+        $('#invoice-img-pink').removeClass('d-none');
+        $('#live-session-img').removeClass('d-none');
+        $('#live-session-img-pink').addClass('d-none');
+        $('#announcement-img').removeClass('d-none');
+        $('#announcement-img-pink').addClass('d-none');
+        $('#my-courses-img').removeClass('d-none');
+        $('#my-courses-img-pink').addClass('d-none');
+        $('html,body').animate({
+            scrollTop: $("#invoice-tab-m").offset().top
+        }, 'slow');
+    }
+    function liveSessions() {
+        $('#live-sessions-m').click();
+        $('.courses-text').css('color', 'black');
+        $('.invoice-text').css('color', 'black');
+        $('.live-text').css('color', '#F56962');
+        $('.anno-text').css('color', 'black');
+        $('#live-session-img').addClass('d-none');
+        $('#live-session-img-pink').removeClass('d-none');
+        $('#announcement-img').removeClass('d-none');
+        $('#announcement-img-pink').addClass('d-none');
+        $('#my-courses-img').removeClass('d-none');
+        $('#my-courses-img-pink').addClass('d-none');
+        $('#invoice-img-pink').addClass('d-none');
+        $('#invoice-img').removeClass('d-none');
+        $('html,body').animate({
+            scrollTop: $("#live-sessions-tab-m").offset().top
+        }, 'slow');
+    }
+    function announcement() {
+        $('#announcements-m').click();
+        $('.courses-text').css('color', 'black');
+        $('.invoice-text').css('color', 'black');
+        $('.live-text').css('color', 'black');
+        $('.anno-text').css('color', '#F56962');
+        $('#announcement-img').addClass('d-none');
+        $('#announcement-img-pink').removeClass('d-none');
+        $('#my-courses-img').removeClass('d-none');
+        $('#my-courses-img-pink').addClass('d-none');
+        $('#invoice-img-pink').addClass('d-none');
+        $('#invoice-img').removeClass('d-none');
+        $('#live-session-img').removeClass('d-none');
+        $('#live-session-img-pink').addClass('d-none');
+        $('html,body').animate({
+            scrollTop: $("#announcements-tab-m").offset().top
+        }, 'slow');
+    }
+</script>

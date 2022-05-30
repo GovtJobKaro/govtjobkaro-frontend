@@ -1,0 +1,88 @@
+<nav class="container navbar navbar-expand-lg  justify-content-center">
+    <a class="navbar-brand" href="/"><img src="https://storage.googleapis.com/govtjobkaro_images/logo.png" width="151px" alt="logo"></a>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="about-us" style='text-decoration: none;color:black;'>About us <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style='text-decoration:none;color:black;' href="courses"
+                    id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Courses
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="courses" style='text-decoration:none;color:black;'>Courses</a>
+                    <a class="dropdown-item" href="test-series" style='text-decoration:none;color:black;'>Test
+                        Series</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="partner" style='text-decoration:none;color:black;'>Partner with us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog" style='text-decoration:none;color:black;'>Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact-us" style='text-decoration:none;color:black;'>Contact us</a>
+            </li>
+            <li class="nav-item">
+                <span style="color: #000; cursor: pointer;" class="nav-link logoutbtn"></span>
+            </li>
+        </ul>
+
+        <button id="toggle-btn" class="btn btn-sm my-2 my-sm-0 user-dashboard" type="submit">My
+            Account
+        </button>
+    </div>
+</nav>
+
+<script>
+
+    $(document).ready(function () {
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        var value = readCookie('token');
+        // console.log(value);
+        if (value == null) {
+            $('#toggle-btn').removeClass('user-dashboard');
+            $('#toggle-btn').addClass('logbtn');
+            $('#toggle-btn').html('Login to view courses');
+
+            $('.logbtn').attr('onclick', 'window.location="login-register"');
+            $('.user-dashboard').css('display', 'none');
+            $('.navbar-nav').css('margin-left', '7%');
+            $('.logoutbtn').addClass('d-none');
+            //window.location = "login-register";
+        } else {
+            $('.user-dashboard').css('display', 'block');
+            $('.user-dashboard').on('click', () => {
+                window.location.href = 'user-dashboard';
+            });
+            $('.logoutbtn').removeClass('d-none');
+            $('.logoutbtn').html('Logout');
+            $('.logoutbtn').attr('onclick', 'logout()');
+            $('.navbar-nav').css('margin-left', '2%');
+        }
+
+        // disable pointer in this pages
+        let url_check = window.location.pathname;
+        var keyword_check = url_check.split("/");
+        let path_check = keyword_check[keyword_check.length - 1];
+        let c = path_check == "404" || path_check == "terms-and-conditions";
+
+        if (!document.cookie && c) {
+            $('.nav-link').addClass('disable-pointer-events');
+        } else {
+            $('.nav-link').removeClass('disable-pointer-events');
+        }
+    });
+</script>

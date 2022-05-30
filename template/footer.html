@@ -1,0 +1,123 @@
+<footer>
+  <img class="pattern-left" src="https://storage.googleapis.com/govtjobkaro_images/Pattern.svg" alt="partern">
+  <div class="container">
+    <div class="pt-4 pb-4 d-flex align-items-center justify-content-between">
+      <a href="/"><img src="https://storage.googleapis.com/govtjobkaro_images/logo-w.png" width="180px" alt="logo"></a>
+      <nav>
+        <a class="poppins-regular" href="about-us">About Us</a>
+        <a class="poppins-regular" href="courses">Our Courses</a>
+        <a class="poppins-regular" href="partner">Partner With Us</a>
+        <a class="poppins-regular" href="contact-us">Contact Us</a>
+        <a class="poppins-regular" href="privacy-policy">Privacy Policy</a>
+        <a class="poppins-regular" href="refund-policy">Refund Policy</a>
+        <a class="poppins-regular" href="terms-and-conditions">T&C's</a>
+        <a class="poppins-regular" href="sitemap.xml">Sitemap</a>
+      </nav>
+    </div>
+    <div class="pt-5 pb-5 border-top-footer d-flex align-items-center justify-content-between">
+      <h6 class="poppins-regular">© 2020-2025 <a href="https://quadbtech.com/">Quadb Technologies.</a> All rights
+        reserved</h6>
+      <div class="social">
+        <a href="https://www.youtube.com/channel/UCPCtMF4z_rD7HeQh8ZwJtUQ/about">
+          <img src="https://storage.googleapis.com/govtjobkaro_images/youtube.png" alt="youtube logo">
+        </a>
+        <a href="https://www.facebook.com/govtjobkaro">
+          <img src="https://storage.googleapis.com/govtjobkaro_images/facebook.png" alt="facebook logo">
+        </a>
+        <a href="https://www.instagram.com/govtjobkaro/">
+          <img src="https://storage.googleapis.com/govtjobkaro_images/instagram.png" alt="instagram logo">
+        </a>
+        <a href="https://telegram.me/govtjobkaro">
+          <img src="https://storage.googleapis.com/govtjobkaro_images/telegram.png" alt="telegram logo">
+        </a>
+      </div>
+    </div>
+  </div>
+  <img class="pattern-right" src="https://storage.googleapis.com/govtjobkaro_images/Pattern.svg" alt="partern">
+</footer>
+
+<style>
+  footer {
+    overflow: hidden;
+    position: relative;
+    color: white;
+    background-color: #282834;
+  }
+
+  .social img {
+    width: 25px;
+    margin: 0 10px;
+  }
+
+  footer a,
+  footer a:hover {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+
+  .pattern-left {
+    position: absolute;
+    top: 70px;
+    left: -40px;
+    width: 180px;
+    transform: rotate(90deg);
+  }
+
+  .pattern-right {
+    position: absolute;
+    bottom: 10px;
+    right: -55px;
+    width: 180px;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+  }
+
+  .border-top-footer h6 {
+    color: #777777;
+  }
+
+  .border-top-footer h6 a {
+    color: inherit;
+  }
+
+  .border-top-footer {
+    border-top: 1px solid #3F3F48;
+  }
+
+  @media (max-width: 425px) {
+    nav {
+      margin-top: 20px;
+      display: grid;
+      font-size: 14px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .pattern-left,
+    .pattern-right {
+      display: none;
+    }
+
+    .pt-4.pb-4.d-flex {
+      flex-direction: column;
+    }
+
+    .border-top-footer {
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .border-top-footer.pt-5 {
+      padding-top: 24px !important;
+    }
+
+    .social {
+      margin-top: 15px;
+    }
+  }
+</style>

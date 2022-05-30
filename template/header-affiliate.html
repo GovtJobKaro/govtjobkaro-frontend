@@ -1,0 +1,110 @@
+<nav class="container navbar navbar-expand-lg  justify-content-center">
+    <a class="navbar-brand" href="/"><img src="https://storage.googleapis.com/govtjobkaro_images/logo-w.png" width="151px" alt="logo"></a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="about-us" style='text-decoration: none;color:black;'>About us <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style='text-decoration:none;color:black;' href="courses" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Courses
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="courses" style='text-decoration:none;color:black;'>Courses</a>
+                  <a class="dropdown-item" href="test-series" style='text-decoration:none;color:black;'>Test Series</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="partner" style='text-decoration:none;color:black;'>Partner with us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact-us" style='text-decoration:none;color:black;'>Contact us</a>
+            </li>
+            <li class="nav-item">
+                <span style="color: #544e7a; cursor: pointer;" class="nav-link logoutbtn"></span>
+            </li>
+        </ul>
+
+        <button class="btn btn-sm my-2 my-sm-0 logbtn purplebtn" onclick="location.href = 'partner-login'"
+            type="submit">Login to view bonus</button>
+
+    </div>
+</nav>
+<script>
+    $(document).ready(function () {
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        var value = readCookie('token');
+        // console.log(value);
+        if (value == null) {
+            // $('.logbtn').attr('onclick', 'window.location="partner-login"');
+            $('.logbtn').click(function () {
+                function delete_cookie(name) {
+                    document.cookie =
+                        name + "=; Domain=govtjobkaro.com; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+                }
+                delete_cookie("partner-page");
+
+                window.location = 'partner-login';
+            })
+
+            //window.location = "login-register";
+        } else {
+
+            $('.logbtn').html('Logout');
+            $('.logbtn').attr('onclick', 'logoutPartner()');
+        }
+
+    });
+
+    function logoutPartner() {
+        $.ajax({
+            type: "POST",
+            url: "php/logout.php",
+            dataType: "json",
+            data: {
+                type: "logout",
+            },
+            success: function (obj) {
+                if (obj.status == "success") {
+                    function delete_cookie(name) {
+                        document.cookie =
+                            name + "=; Domain=govtjobkaro.com; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+                    }
+                    delete_cookie("token");
+                    window.location = "partner-logout";
+                } else {
+                    alert("try again");
+                }
+            },
+        });
+    }
+
+    // header animation
+    $(window).scroll(function () {
+        var sticky = $('.header'),
+            scroll = $(window).scrollTop();
+
+        if (scroll >= 100) {
+            sticky.addClass('fixed shadow');
+            $('.navbar-brand img').attr('src', 'https://storage.googleapis.com/govtjobkaro_images/logo.png')
+            $(".nav-link").removeClass('nav-a');
+        } else {
+            $('.navbar-brand img').attr('src', 'https://storage.googleapis.com/govtjobkaro_images/logo-w.png')
+            sticky.removeClass('fixed shadow');
+            $(".nav-link").addClass('nav-a');
+
+        }
+
+    });
+
+</script>

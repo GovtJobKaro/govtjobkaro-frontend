@@ -1,0 +1,453 @@
+<div class="bottom-nav-container">
+	<!-- nav-bottom -->
+	<nav class="nav-bottom mt-0 d-flex align-items-center justify-content-around">
+		<div id="home" class="nav-item">
+			<a class="d-flex align-items-center justify-content-center flex-column" href='/' id="home-btn"
+				class="nav-button">
+				<img id="home-img" src="./images/home-black.png" alt="home">
+				<p class="poppins-medium">Home</p>
+			</a>
+		</div>
+
+		<div id="courses" class="nav-item">
+			<button style='border: none;background-color: white;outline: none;'
+				class="d-flex align-items-center justify-content-center flex-column" id="myBtn" class="nav-button">
+				<img id="courses-img" src="./images/courses-black.png" alt="courses">
+				<p class="poppins-medium">Courses</p>
+			</button>
+
+			<div class="modal" id='myModal'>
+				<div id="myModalCourse">
+					<a href="courses" class="modal-content-course" id='courses-btn'>
+						<img src="./images/courses-black.png" alt="courses">
+						<p>Courses</p>
+					</a>
+				</div>
+
+				<div id="myModalTest">
+					<a href="test-series" class="modal-content-test" id='test-series-btn'>
+						<img src="./images/test-series-black.png" alt="test series">
+						<p style='padding-top: 4px;'>Test Series</p>
+					</a>
+				</div>
+			</div>
+
+		</div>
+		<div id="partner" class="nav-item">
+			<a class="d-flex align-items-center justify-content-center flex-column" href='blog' id="partner-btn"
+				class="nav-button">
+				<img id="partner-img" src="./images/blog.png" alt="Blog">
+				<p class="poppins-medium">Blogs</p>
+			</a>
+		</div>
+		<div id="partner" class="nav-item">
+			<a class="d-flex align-items-center justify-content-center flex-column" href='partner' id="partner-btn"
+				class="nav-button">
+				<img id="partner-img" src="./images/partner-black.png" alt="partner">
+				<p class="poppins-medium">Partner</p>
+			</a>
+		</div>
+		<div id="contact-us" class="nav-item">
+			<a class="d-flex align-items-center justify-content-center flex-column" href='contact-us'
+				id="contact-us-btn" class="nav-button">
+				<img id="contact-us-img" src="./images/contact-us-black.png" alt="contact-us">
+				<p class="poppins-medium">Support</p>
+			</a>
+		</div>
+	</nav>
+	<!-- sign-status -->
+	<a href="" id="sign-status" class="poppins-regular">You Aren't Logged in, Click Here to Login Now</a>
+</div>
+
+<style>
+	html {
+		scroll-behavior: smooth;
+	}
+
+	.modal {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		-webkit-animation-name: fadeIn;
+		-webkit-animation-duration: 0.6s;
+		animation-name: fadeIn;
+		animation-duration: 0.6s;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	.modall {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		-webkit-animation-name: fadeIn;
+		-webkit-animation-duration: 0.6s;
+		animation-name: fadeIn;
+		animation-duration: 0.6s;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	#myModalCourse img {
+		height: 32px;
+		object-fit: contain;
+		margin-left: 4px;
+	}
+
+	#myModalTest img {
+		height: 22px;
+		object-fit: contain;
+	}
+
+	.modal-content-course {
+		position: fixed;
+		bottom: 17.6vh;
+		/* left: 16vw; */
+		left: 26vw;
+		width: 20.2vw;
+		height: 20.2vw;
+		animation-name: slideInCourse;
+		animation-duration: 0.6s;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border-radius: 44px;
+		padding: 12px 14px;
+		font-size: 10px;
+		background-color: white;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.modal-content-test {
+		position: fixed;
+		bottom: 30vh;
+		left: 26vw;
+		/* left: 32vw; */
+		width: 20.4vw;
+		height: 20.4vw;
+		animation-name: slideInTest;
+		animation-duration: 0.6s;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border-radius: 40px;
+		padding: 12px 6px;
+		font-size: 0px;
+		background-color: white;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	@keyframes slideInCourse {
+		from {
+			bottom: 0vh;
+			/* left: 24vw; */
+			opacity: 0
+		}
+
+		to {
+			bottom: 17.6vh;
+			/* left: 16vw; */
+			opacity: 1
+		}
+	}
+
+	@keyframes slideInTest {
+		from {
+			bottom: 0vh;
+			/* left: 24vw; */
+			opacity: 0
+		}
+
+		to {
+			bottom: 30vh;
+			/* left: 32vw; */
+			opacity: 1
+		}
+	}
+
+	@-webkit-keyframes fadeIn {
+		from {
+			opacity: 0
+		}
+
+		to {
+			opacity: 1
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0
+		}
+
+		to {
+			opacity: 1
+		}
+	}
+
+
+	.nav-bottom a,
+	.nav-bottom a:hover {
+		color: black;
+		text-decoration: none;
+	}
+
+	.nav-single-course {
+		position: relative;
+		bottom: -25px;
+	}
+
+	.nav-single-course p {
+		font-size: 11px;
+		margin-bottom: 0;
+		font-weight: lighter;
+	}
+
+	.nav-single-course img {
+		width: 20px;
+	}
+
+	.whatsapp {
+		width: 50%;
+		color: white;
+		padding: 12px 10px 40px;
+		background-color: #6C63FF;
+	}
+
+	.add-to-cart {
+		width: 50%;
+		color: white;
+		padding: 12px 10px 40px;
+		background-color: #43C8B1;
+	}
+
+	.nav-bottom {
+		width: 100%;
+		position: relative;
+		bottom: 0;
+		left: 0;
+		padding: 8px 15px 6px 15px;
+		border-top-left-radius: 25px;
+		border-top-right-radius: 25px;
+		background-color: white;
+		box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.4);
+	}
+
+	div img+p {
+		font-size: 12px;
+		margin-bottom: 0;
+	}
+
+	.nav-bottom .nav-item
+
+	/* .active */
+		{
+		color: #F56962;
+	}
+
+	#home-img,
+	#contact-us-img {
+		height: 22px;
+	}
+
+	#home-img,
+	#partner-img,
+	#contact-us-img {
+		margin-bottom: 5px;
+	}
+
+	#courses-img {
+		margin-bottom: 3px;
+	}
+
+	#test-series-img {
+		margin-bottom: 5px;
+	}
+
+	/* sign-status */
+	#sign-status,
+	#sign-status:hover {
+		display: block;
+		color: white;
+		font-size: 14px;
+		margin-bottom: 0;
+		padding: 12px 0;
+		text-align: center;
+		background-color: #F56962;
+		text-decoration: none;
+	}
+</style>
+
+<script>
+	// active nav 
+	
+	let url = window.location.pathname;
+	var keyword = url.split("/");
+	let path = keyword[keyword.length - 1];
+	const pages = ["index", "courses", "partner", "contact-us"]
+
+	let courseHeader = document.getElementById('courses')
+	if (path == 'courses') {
+		courseHeader.innerHTML =
+			`<button style='border: none;background-color: white;outline: none;'
+				class="d-flex align-items-center justify-content-center flex-column" id="myBtn" class="nav-button"
+				>
+				<img id="courses-img" src="./images/courses-black.png" alt="courses">
+				<p class="poppins-medium">Courses</p>
+			</button>
+			<div class="modal" id='myModal'>
+				<div id="myModalCourse">
+					<a href="courses" class="modal-content-course" id='courses-btn'>
+						<img src="./images/courses-black.png" alt="courses">
+						<p>Courses</p>
+					</a>
+				</div>
+
+				<div id="myModalTest">
+					<a href="test-series" class="modal-content-test" id='test-series-btn'>
+						<img src="./images/test-series-black.png" alt="test series">
+						<p style='padding-top: 4px;'>Test Series</p>
+					</a>
+				</div>
+			</div>`
+	}
+
+	else if (path == 'test-series') {
+		courseHeader.innerHTML =
+			`<button style='border: none;background-color: white;outline: none;'
+				class="d-flex align-items-center justify-content-center flex-column" id="myBtn" class="nav-button"
+				>
+				<img id="test-series-img" src="./images/test-series-black.png" alt="test series">
+				<p class="poppins-medium">Test Series</p>
+			</button>
+			<div class="modal" id='myModal'>
+				<div id="myModalCourse">
+					<a href="courses" class="modal-content-course" id='courses-btn'>
+						<img src="./images/courses-black.png" alt="courses">
+						<p>Courses</p>
+					</a>
+				</div>
+
+				<div id="myModalTest">
+					<a href="test-series" class="modal-content-test" id='test-series-btn'>
+						<img src="./images/test-series-black.png" alt="test series">
+						<p style='padding-top: 4px;'>Test Series</p>
+					</a>
+				</div>
+			</div>`
+	}
+
+	var modal = document.getElementById('myModal')
+
+	var btn = document.getElementById("myBtn");
+
+	btn.onclick = function () {
+		modal.style.display = 'block'
+	}
+
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.display = 'none'
+		}
+	}
+
+	if (path == 'single-course-page') {
+		$('.nav-single-course-box').removeClass('d-none');
+	}
+
+	if (path == 'home') {
+		$(`#home-btn`).addClass("active");
+		$(`#home-img`).attr("src", `./images/home-pink.png`);
+	}
+
+	else if (path == 'courses' || path == 'test-series') {
+		$(`#${path}-btn`).addClass("active");
+		$(`#${path}-img`).attr("src", `./images/${path}-pink.png`);
+	}
+
+
+	else if (path != '/' && path != 'index' && path != 'courses' && path != 'test-series') {
+		$(`#${path}-btn`).addClass("active");
+		$(`#${path}-img`).attr("src", `./images/${path}-pink.png`);
+
+		for (var i = 0; i == pages.length; i++) {
+			if (!path) {
+				$(`#${pages[i]}-btn`).removeClass("active");
+				$(`#${pages[i]}-img`).attr("src", `./images/${pages[i]}-black.png`);
+			}
+			continue;
+			// console.log(pages[i]);
+		};
+	}
+
+	pages.forEach(page => {
+		if (path === page) {
+			// console.log('Page', page);
+			$(`#${page}-btn`).attr('href', '#');
+		} else if (window.location.pathname === '/') {
+			// console.log("Pathname === '/'")
+			$(`#home-btn`).attr('href', '#');
+		}
+	});
+
+	function readCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for (var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+		}
+		return null;
+	}
+	var value = readCookie('token');
+	// console.log(value);
+	if (value == null) {
+		$('#sign-status').attr('href', 'login-register');
+		//window.location = "login-register";
+	} else if (path !== pages[2]) {
+		$('#sign-status').html('Click Here to View Your Course Now');
+		$('#sign-status').attr('href', 'user-dashboard');
+	}
+
+	// partner login
+	if (path === pages[2] && value === null) {
+		$('#sign-status').attr('href', 'partner-login');
+		$('#sign-status').addClass('purplebtn');
+	}
+	else if (path === pages[2] || path === 'partner-logout') {
+		$('#sign-status').addClass('purplebtn');
+		$('#sign-status').html('Click Here to View Bonus');
+		$('#sign-status').attr('href', `https://partner.govtjobkaro.com/`);
+	}
+
+	if ($(window).innerWidth() < 922) {
+		var height = $(window).innerHeight()
+		// console.log(height)
+		window.addEventListener("resize", (e) => {
+			var resize = $(window).innerHeight()
+			// console.log(resize)
+			if (height > resize) {
+				// console.log("detected")
+				$('.bottom-nav-container').fadeOut();
+				$('.bottom-nav-container').addClass('d-none');
+				$('.nav-single-course-box').fadeOut();
+				$('.nav-single-course-box').addClass('d-none');
+			} else if (height === resize) {
+				// console.log("Not detected")
+				$('.bottom-nav-container').fadeIn();
+				$('.bottom-nav-container').removeClass('d-none');
+				$('.nav-single-course-box').fadeIn();
+				$('.nav-single-course-box').removeClass('d-none');
+			}
+		});
+	}
+</script>

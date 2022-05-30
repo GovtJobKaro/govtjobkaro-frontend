@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NB4ZFHF');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Enter a proper page title here -->
+    <title>Want to be part of the Govtjobkaro Notifcation Army? Login or Register here to Join Now</title>
+
+    <!-- CSS to include bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- css to include style.css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- required meta tags essential for seo and link sharing -->
+
+    <!-- Enter a proper description for the page in the meta description tag -->
+    <meta name="description"
+        content="Want to be part of the Govtjobkaro Notification army? Use this Page to login now and be a member of the army now if you have trouble logging in send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385" />
+
+    <!-- Enter a keywords for the page in tag -->
+    <meta name="Keywords" content="ENTER_KEYWORDS_HERE" />
+
+    <!-- Enter Page title -->
+    <meta property="og:title"
+        content="Want to be part of the Govtjobkaro Notifcation Army? Login or Register here to Join Now" />
+
+    <!-- Enter Page URL -->
+    <meta property="og:url" content="https://govtjobkaro.com/notification-page-userexists" />
+
+    <!-- Enter page description -->
+    <meta property="og:description"
+        content="Want to be part of the Govtjobkaro Notification army? Use this Page to login now and be a member of the army now if you have trouble logging in send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385" />
+
+    <!-- Enter Logo image URL for example : http://cryptonite.finstreet.in/images/cryptonitepost.png -->
+    <meta property="og:image" itemprop="image" content="https://partner.govtjobkaro.com/meta-img.jpg" />
+    <meta property="og:image:secure_url" itemprop="image" content="https://partner.govtjobkaro.com/meta-img.jpg" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon location for example :  images/cropped-Fin-270x270.jpg -->
+    <!-- <link rel="icon" href="ENTER_FAVICON_LOCATION" /> -->
+    <link rel="icon" href="images/logo without text.png">
+
+
+    <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
+    <style>
+        /* Example CSS */
+        /*.link {
+            position: relative;
+            display: inline-block;
+        }
+
+        .link .tip {
+            opacity: 1;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1000;
+            top: -5px;
+            right: 105%;
+            transition: 0.5s ease;
+            overflow: hidden;
+            margin-right: 20px;
+        }*/
+
+        .main {
+            height: 100vh;
+        }
+
+        #showDiv {
+            display: none;
+        }
+
+        #showDiv2 {
+            display: none;
+        }
+
+        #showDiv3 {
+            display: none;
+        }
+
+        #getotp4,
+        #getotp5,
+        #getotp6,
+        #otp2,
+        #otp4,
+        #otp5 {
+            text-align: center;
+            background-color: #f56962;
+            border-radius: 4px;
+            opacity: 1;
+            font-family: Poppins Normal;
+            color: #ffffff;
+        }
+
+        #showDiv4 {
+            display: none;
+        }
+
+        /*Bottom Navbar*/
+        .mobile-bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            will-change: transform;
+            transform: translateZ(0);
+
+            display: flex;
+            height: 55px;
+
+            box-shadow: 0 -2px 5px -2px #333;
+            background-color: #fff;
+
+        }
+
+        /* mobile-bottom-nav a */
+        .mobile-bottom-nav a {
+            color: black;
+            font-family: Poppins Normal;
+            src: url("../fonts/Poppins-Regular.ttf");
+        }
+
+        .mobile-bottom-nav__item {
+
+            flex-grow: 1;
+            text-align: center;
+            font-size: 12px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .mobile-bottom-nav__item--active {
+
+            color: rgb(226, 40, 71);
+        }
+
+        .mobile-bottom-nav__item-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #sign-in,
+        #sign-up:hover {
+            cursor: pointer;
+        }
+
+        .not-found-container-otp {
+            width: 100vw;
+            height: 100vh;
+            z-index: 111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+
+        .close-btn-otp {
+            color: white;
+            font-size: 15px;
+            background-color: #F56962;
+        }
+
+        .not-found-container {
+            width: 100vw;
+            height: 100vh;
+            z-index: 111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+
+        .not-found-container2 {
+            width: 100vw;
+            height: 100vh;
+            z-index: 111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+
+        .not-found-containerMob {
+            width: 100vw;
+            height: 100vh;
+            z-index: 111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+
+        .not-found-containerMob2 {
+            width: 100vw;
+            height: 100vh;
+            z-index: 111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+
+        .not-found {
+            width: 300px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            background-color: white;
+            padding: 25px 20px 20px 20px;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        }
+
+        .close-btn {
+            color: white;
+            font-size: 15px;
+            background-color: #F56962;
+        }
+
+        .close-btn2 {
+            color: white;
+            font-size: 15px;
+            background-color: #F56962;
+        }
+
+        .close-btn-mob {
+            color: white;
+            font-size: 15px;
+            background-color: #F56962;
+        }
+
+        .close-btn-mob2 {
+            color: white;
+            font-size: 15px;
+            background-color: #F56962;
+        }
+
+        .not-found-container-invalid-num {
+            width: 100vw;
+            height: 100vh;
+            z-index: 111111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+
+        .close-btn-invalid-num {
+            color: white;
+            font-size: 15px;
+            background-color: #F56962;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        .loader-container-login {
+            width: 32vw;
+            margin-top: 25px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .loader {
+            width: 30px;
+            height: 30px;
+            border: 5px solid #f56962;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: 1s loader linear infinite;
+            animation: 1s loader linear infinite;
+            position: relative;
+        }
+
+        .wrong-number {
+            color: #F56962;
+            float: right;
+            display: none;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .wrong-number-mob {
+            display: block;
+            margin-bottom: 0;
+            display: none;
+        }
+
+        @-webkit-keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    </style>
+</head>
+
+<body style="font-family: poppins normal;">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB4ZFHF" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section class="not-found-container-invalid-num">
+        <div class="not-found d-flex align-items-center justify-content-center flex-column">
+            <!-- <img class="not-found-img" src="https://storage.googleapis.com/govtjobkaro_images/search-line.png" alt="not-found"> -->
+            <b class=" poppins-regular text-center mt-4 mb-0">
+                Number Not Valid!
+            </b>
+            <button class="btn poppins-medium close-btn-invalid-num mt-4">Try Again</button>
+        </div>
+    </section>
+    <section class="not-found-container-otp">
+        <div class="not-found d-flex align-items-center justify-content-center flex-column">
+            <!-- <img class="not-found-img" src="https://storage.googleapis.com/govtjobkaro_images/search-line.png" alt="not-found"> -->
+            <b class=" poppins-regular text-center mt-4 mb-0">
+                OTP is Incorrect!
+            </b>
+            <button class="btn poppins-medium close-btn-otp mt-4" onclick="closeIt()">Close</button>
+        </div>
+    </section>
+    <div class="d-none d-lg-block main">
+        <!-- Enter code for desktop UI here -->
+        <div class="container-fluid">
+            <div class="row">
+                <div id="login-left" class="col-lg-6 col-md-12"
+                    style="background-color: #6C63FF; height: 100vh; width: 50vw;">
+                    <div class="job" style="visibility: hidden;">
+                        <p style="color: #ffffff;" class="mt-3">Gov job karo</p>
+                    </div>
+                    <div class="" style="position: absolute;top: -25px;left: 25px;">
+                        <a href="/"><img src="images/GovtJobsKaro dark@2x.png" style="width: 253px;height: 143px;"></a>
+                    </div>
+
+                    <div id="govern">
+                        <div class="tube mt-5">
+                            <img src="images/Financial - Scenes 2 prebuild.svg" style="width: 400px;" />
+                            <img src="https://storage.googleapis.com/govtjobkaro_images/Pattern.svg" class="img-fluid"
+                                style="position: absolute;left: 0;bottom: 0px;width: 300px;height: 100px;">
+                            <img src="https://storage.googleapis.com/govtjobkaro_images/Pattern.svg" class="img-fluid"
+                                style="position: absolute;left: 0px;bottom: 90px;width: 300px;height: 100px;">
+                            <h1 style="text-align: right">Life main kabhi na daro</h1>
+                            <h1 style="text-align: right">Government Job Karo</h1>
+                            <div id="govern-left">
+                                <p>Get the best Government Jobs Prep Now.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col lg-6" style="height: 100vh;">
+                    <div class="register1 ml-5 p-4">
+                        <div id="register-top" class="container d-flex mt-5 pl-5" style="width: 32vw;">
+                            <div>
+                                <label id="already" class="mt-2">Don't have an account?</label>
+                            </div>
+                            <button class="btn" id="reg" type="submit"></button>
+                        </div>
+                        <div class="container pl-5 mt-5 pt-3" id="register-mid">
+                            <h2 style="width: 32vw;text-align: center;">Hello ! Welcome back.</h2>
+                            <p
+                                style="font-size: 18px; color: #5F5982; font-weight: normal;width: 32vw;text-align: center;">
+                                There is No Need to Remember a Password,<br> You Need is Your Mobile Number</p>
+                            <div style="width: 32vw;margin-top: 30px">
+                                <label for="phone-login">Mobile Number</label><span class="wrong-number cursor-pointer"
+                                    id="wrong-number-login">Entered a wrong
+                                    number? <u>Re-enter Now</u></span>
+                            </div>
+                            <input type="number" id="phone-login" class="form-control p-2"
+                                placeholder="Enter your phone number" style="width:32vw">
+                            <div class="getOtpDiv">
+                                <div class="loader-container-login d-none">
+                                    <div class="loader"></div>
+                                </div>
+                                <button class="btn mt-4" style="width: 32vw;" id="getotp" type="submit">Get
+                                    OTP</button>
+                            </div>
+                            <div class="otp-input mt-2" style="display:none;">
+                                <div style="width: 32vw;">
+                                    <label for="phone-otp">Enter OTP </label>
+                                    <p
+                                        style="color:#6C63FF;font-weight:normal;font-size: 12px;float:right;margin-bottom: 0;margin-top: 3px;">
+                                        Didn't Receive an OTP? <u><a onclick="otp()"
+                                                style="color:#6C63FF;cursor:pointer;">Resend
+                                                Now</a></u></p>
+                                </div>
+                                <input type="text" id="phone-otp" class="form-control p-2 mb-4" placeholder="Enter OTP"
+                                    style="width: 32vw; ">
+                                <button class="btn" id="signIn" type="submit"
+                                    style="text-align: center;background-color: #f56962; border-radius: 4px; width: 32vw;padding: 8px;opacity: 1;font-family:  Poppins Normal; color: #ffffff;">Sign
+                                    in</button>
+                            </div>
+                            <p style="font-size: 15px; color: #5F5982; font-weight: normal;" class="mt-4">
+                                Don't have an
+                                account?
+                                <span id="sign-up" href="" style="color: #F56962;">Sign Up</span>
+                            </p>
+                            <section class="not-found-container">
+                                <div class="not-found d-flex align-items-center justify-content-center flex-column">
+                                    <!-- <img class="not-found-img" src="https://storage.googleapis.com/govtjobkaro_images/search-line.png" alt="not-found"> -->
+                                    <b class=" poppins-regular text-center mt-4 mb-0">
+                                        OOPS! You are not registered
+                                    </b>
+                                    <button class="btn poppins-medium close-btn mt-4">Sign Up NOW</button>
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+                    <div class="register2 ml-5 pt-4 pl-3">
+                        <div id="register-top" class="container d-flex mt-5" style="width: 32vw;">
+                            <div>
+                                <label id="already" class="mt-2">Already have an account?</label>
+                            </div>
+                            <button class="btn" id="log" type="submit">Log In</button>
+                        </div>
+                        <div class=" container pl-5 mt-5 pt-3" id="register-mid ">
+                            <h2 style="width:32vw; text-align: center;font-weight: bold;">Just 1 Last Step Left!</h2>
+                            <p
+                                style="font-size: 18px; color: #5F5982; font-weight: normal;width:32vw; text-align: center;">
+                                Create a New Account with just your Mobile Number</p>
+                            <label for="name-register " style="font-weight: bold;">Full Name</label><br>
+                            <input type="text" id="name-register" class="form-control" placeholder="Your Name"
+                                style="width: 32vw;">
+                            <div style="width: 32vw;margin-top:15px">
+                                <label for="phone-register" style="font-weight: bold">Mobile Number</label><span
+                                    class="wrong-number cursor-pointer" id="wrong-number-sign-up">Entered a wrong
+                                    number? <u>Re-enter Now</u></span>
+                            </div>
+                            <input type="number" id="phone-register" class="form-control" style="width: 32vw;"
+                                placeholder="Enter your phone number">
+                            <div id="showDiv" style="display: none;" class="mt-2">
+                                <div style="width: 32vw;">
+                                    <label id="phone-reg" for="phone-register"><strong>Enter OTP</strong> </label>
+                                    <p
+                                        style="color:#6C63FF;font-weight: normal;font-size: 12px;float: right;margin-bottom: 0;margin-top: 3px; ">
+                                        Didn't
+                                        Receive an OTP?
+                                        <u><a onclick="otpSignIn()" style="color: #6C63FF;cursor: pointer;">Resend
+                                                Now</a></u>
+                                    </p>
+                                </div>
+                                <input type="text " id="otp-register" class="form-control " placeholder="Enter OTP"
+                                    style="width: 32vw; padding: 10px;">
+                                <button class="btn mt-4" id="signUp" type="submit"
+                                    style="text-align: center;background-color: #f56962; border-radius: 4px; width: 32vw;padding: 8px;opacity: 1;font-family:  Poppins Normal; color: #ffffff;">Sign
+                                    Up
+                                </button>
+                            </div>
+                            <div class="loader-container-login d-none">
+                                <div class="loader"></div>
+                            </div>
+                            <button class="btn mt-3" style="width: 32vw;background-color: #f56962;color: white;"
+                                id="register-otp" type="submit">Get OTP</button>
+                            <p style="font-size: 15px; color: #5F5982; font-weight: normal;width: 32vw;" class="mt-4">By
+                                signing up, you agree to our communications and usage terms Already have an account?
+                                <span id="sign-in" href="" style="color: #F56962;">Sign In</span>
+                            </p>
+                            <section class="not-found-container2">
+                                <div class="not-found d-flex align-items-center justify-content-center flex-column">
+                                    <!-- <img class="not-found-img" src="https://storage.googleapis.com/govtjobkaro_images/search-line.png" alt="not-found"> -->
+                                    <b class=" poppins-regular text-center mt-4 mb-0">
+                                        You are already registered!
+                                    </b>
+                                    <button class="btn poppins-medium close-btn2 mt-4">Log In NOW</button>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile view -->
+    <div class="d-lg-none position-relative" style="width: 100vw">
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div id="login-left" class="d-lg-none" style="background-color: #6C63FF;width: 100vw;">
+
+                    <div id="govern" style="margin-right: auto; margin-top: 0px;">
+                        <div class="text-center">
+                            <a href="/"> <img src="images/GovtJobsKaro dark@2x.png" style="width: 180px;"></a>
+                        </div>
+                        <h1 style="text-align: center; font-size: 12px; background-color:#f56962; padding: 20px 0px;"
+                            id="login-register">
+                            Don't have an
+                            account?
+                            <span>
+                                Register<em> Now</em>
+                            </span>
+                        </h1>
+                        <h1 style="text-align: center; font-size: 12px; background-color:#f56962; padding: 20px 0px;display: none;"
+                            id="login-register2">
+                            Already have an account?
+                            <span>
+                                Login<em> Now</em>
+                            </span>
+                        </h1>
+                        <h1 style="text-align: center; font-size: 30px; margin-top: 20px;">
+                            Life Mein<br> Aage Badho
+                        </h1>
+                        <h1 style="text-align: center; font-size: 30px;color: #f56962;">Government
+                            Job Karo</h1>
+                        <div id="govern-left" class="text-center">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="register1" style="text-align: center">
+                        <div id="register-mid" class=" mt-5" id="register-mid ">
+                            <h4 style="font-size: 25px;font-weight: bold;">Welcome back.</h4>
+                            <p style="font-size: 17px; color: #5f5982; font-weight: normal">
+                                There is No Need to Remember a Password,<br />
+                                You Need is Your Mobile Number
+                            </p>
+                            <label for="phone-register" style="font-size: 15px; margin-bottom: 5px;">Mobile Number
+                                :</label><br />
+
+                            <input type="text " id="registration-otp" class="form-control"
+                                placeholder="Enter your phone number"
+                                style="padding: 20px 5px; font-size: 14px; text-align: center;width: 92vw;" />
+                            <p class="wrong-number-mob font-weight-normal" style="font-size: 12px;color: #F56962;"
+                                id="wrong-number-login-mob">
+                                Entered a wrong
+                                number? <u>Re-enter Now</u></p>
+                            <div id="showDivMob" style="display: none;" class="">
+                                <label id="phone-reg" for="phone-register"
+                                    style="font-size: 15px;margin-bottom: 0%;"><strong>Enter
+                                        OTP :</strong> </label>
+
+                                <input type="text " id="otp-register3" class="form-control " placeholder="Enter OTP"
+                                    style="width: 92vw; padding: 20px 5px;font-size: 14px;text-align: center;">
+                                <p style="display: inline;color:#6C63FF;font-weight: normal;font-size: 12px; ">
+                                    Didn't
+                                    Receive an OTP?
+                                    <u><a onclick="otpMob()" style="color: #6C63FF;">Resend Now</a></u>
+                                </p>
+                                <button class="btn mt-2" id="signInMob" type="submit"
+                                    style="font-size: 15px; text-align: center;background-color: #f56962; border-radius: 4px; width: 92vw;padding:8px 5px;opacity: 1;font-family:  Poppins Normal; color: #ffffff;">Sign
+                                    In
+                                </button>
+                            </div>
+                            <div class="loader-container-login d-none">
+                                <div class="loader"></div>
+                            </div>
+                            <button class="btn" id="getotp2" type="submit "
+                                style="margin-top: 10px; font-size: 15px;background-color: #f56962; ">
+                                Get OTP
+                            </button>
+                            <p style="font-size: 14px; color: #5f5982; font-weight: normal" class="mt-2">
+                                Don't have an account?
+                                <span id="sign-up2" style="color: #f56962; cursor: pointer;">Sign Up</span>
+                            </p>
+                            <section class="not-found-containerMob">
+                                <div class="not-found d-flex align-items-center justify-content-center flex-column">
+                                    <!-- <img class="not-found-img" src="https://storage.googleapis.com/govtjobkaro_images/search-line.png" alt="not-found"> -->
+                                    <b class=" poppins-regular text-center mt-4 mb-0">
+                                        OOPS! You are not registered
+                                    </b>
+                                    <button class="btn poppins-medium close-btn-mob mt-4">Sign Up NOW</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="register2 text-center">
+
+                        <div id="register-mid" class=" mt-5" id="register-mid ">
+                            <h4 style="font-size: 25px;font-weight: bold;">Just 1 Last Step Left!</h4>
+                            <p style="font-size: 17px; color: #5f5982; font-weight: normal">
+                                Create a New Account with just your Mobile Number
+                            </p>
+                            <label for="phone-register " style="font-size: 15px; margin-bottom: 0%;">Full
+                                Name :</label><br />
+                            <input type="text " id="form-register" class="form-control" placeholder="Your Name "
+                                style="padding: 20px 5px; font-size: 14px; text-align: center;" />
+                            <label for="phone-register "
+                                style="font-size: 15px; margin-bottom: 0%;margin-top: 10px;">Mobile
+                                Number :</label><br />
+
+                            <input type="text " id="form-register2" class="form-control"
+                                placeholder="Enter your phone number "
+                                style="padding: 20px 5px; font-size: 14px; text-align: center;" />
+                            <p class="wrong-number-mob font-weight-normal" style="font-size: 12px;color: #F56962;"
+                                id="wrong-number-sign-up-mob">
+                                Entered a wrong
+                                number? <u>Re-enter Now</u></p>
+                            <div id="showDivMob2" style="display: none;" class="">
+                                <label id="phone-reg" for="phone-register"
+                                    style="font-size: 15px;margin-bottom: 0%;margin-top: 10px;"><strong>Enter
+                                        OTP :</strong> </label>
+
+                                <input type="text " id="otp-register2" class="form-control mt-0" placeholder="Enter OTP"
+                                    style="width: 92vw; padding: 20px 5px;font-size: 14px;text-align: center;">
+                                <p style="display: inline;color:#6C63FF;font-weight: normal;font-size: 12px; ">
+                                    Didn't
+                                    Receive an OTP?
+                                    <u><a onclick="otpSignInMob()" style="color: #6C63FF;">Resend Now</a></u>
+                                </p>
+                                <button class="btn mt-2" id="signUpMob" type="submit"
+                                    style="font-size: 15px; text-align: center;background-color: #f56962; border-radius: 4px; width: 92vw;padding: 8px 5px;opacity: 1;font-family:  Poppins Normal; color: #ffffff;">Sign
+                                    Up
+                                </button>
+                            </div>
+                            <div class="loader-container-login d-none">
+                                <div class="loader"></div>
+                            </div>
+                            <button class="btn" id="getotpMob" type="submit "
+                                style="font-size: 15px; width: 92vw;padding: 8px 5px;background-color: #f56962;color: white;margin-top: 10px;">
+                                Get OTP
+                            </button>
+                            <p style="font-size: 14px; color: #5f5982; font-weight: normal" class="mt-4">
+                                By signing up, you agree to our communications and usage
+                                terms Already have an account?
+                                <span id="sign-in2" style="color: #f56962">Sign In</span>
+                            </p>
+                            <section class="not-found-containerMob2">
+                                <div class="not-found d-flex align-items-center justify-content-center flex-column">
+                                    <!-- <img class="not-found-img" src="https://storage.googleapis.com/govtjobkaro_images/search-line.png" alt="not-found"> -->
+                                    <b class=" poppins-regular text-center mt-4 mb-0">
+                                        You are already registered!
+                                    </b>
+                                    <button class="btn poppins-medium close-btn-mob2 mt-4">Log In</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="https://kit.fontawesome.com/f368dd0adb.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+
+        $(".footer").load('template/footer.html');
+
+        document.getElementById('phone-login').value = localStorage.getItem('mobile-number');
+        document.getElementById('registration-otp').value = localStorage.getItem('mobile-number');
+
+
+        // GET OTP STATUS FAILURE
+
+        $('.close-btn').click(function () {
+            $('.not-found-container').hide();
+            $('.register2').stop().fadeIn('slow');
+            $('.register1').hide();
+            $('#phone-register').val($('#phone-login').val());
+
+        })
+
+        $('.close-btn2').click(function () {
+            $('.not-found-container2').hide();
+            $('.register1').stop().fadeIn('slow');
+            $('.register2').hide();
+            $('#phone-login').val($('#phone-register').val());
+
+        })
+
+        $('.close-btn-mob').click(function () {
+            $('.not-found-containerMob').hide();
+            $('.register2').stop().fadeIn('slow');
+            $('.register1').hide();
+            $('#form-register2').val($('#registration-otp').val());
+
+        })
+
+        $('.close-btn-mob2').click(function () {
+            $('.not-found-containerMob2').hide();
+            $('.register1').stop().fadeIn('slow');
+            $('.register2').hide();
+            $('#registration-otp').val($('#form-register2').val());
+
+        })
+
+        function closeIt() {
+            $('.not-found-container-otp').fadeOut();
+
+        }
+
+        $('.close-btn-invalid-num').click(function () {
+            $('.not-found-container-invalid-num').fadeOut();
+        })
+        $("#getotp2").on("click", function (e) {
+            e.preventDefault();
+            var error = "";
+            var mobile = $("#registration-otp").val();
+            if (mobile == "" || mobile.length !== 10) {
+                $('.not-found-container-invalid-num').fadeIn();
+                $("#registration-otp").css('border-color', 'red');
+                $("#registration-otp").css('border-width', '2px');
+                error = error + 'mobile';
+            } else {
+                $("#registration-otp").css('border-color', '#BCE0FD');
+                $("#registration-otp").css('border-width', '1px');
+            }
+
+
+            if (error == "") {
+                $(".loader-container-login").css({
+                    "width": "92vw",
+                    "height": "20px",
+                    "margin-top": "40px",
+                    "margin-bottom": "20px"
+                })
+                $(".loader-container-login").removeClass('d-none');
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/user-login.php',
+                    dataType: "json",
+                    data: {
+                        mobile: mobile
+                    },
+                    success: function (obj) {
+                        if (obj.status == 'success') {
+                            $(".loader-container-login").addClass('d-none');
+                            $('#registration-otp').attr('value', mobile);
+                            $('#registration-otp').attr('disabled', 'disabled');
+                            $('#wrong-number-login-mob').fadeIn();
+                            $('#showDivMob').css('display', 'block');
+                            $('#getotp2').css('display', 'none');
+                            // window.location = 'login-otp?mobile='+ $("#phone-login").val() +'';
+                        } else if (obj.status == 'failure') {
+                            //Email already registered
+                            // alert(obj.msg);
+                            $(".loader-container-login").addClass('d-none');
+
+                            $('.not-found-containerMob').fadeIn();
+
+                        } else {
+                            alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                        }
+                    }
+                });
+            }
+        });
+
+
+        $("#getotpMob").on("click", function () {
+            // e.preventDefault();
+            event.preventDefault();
+            var error = "";
+
+            if ($("#form-register").val() == "") {
+                $("#form-register").css('border-color', 'red');
+                $("#form-register").css('border-width', '2px');
+                error = error + 'name';
+            } else {
+                $("#form-register").css('border-color', '#BCE0FD');
+                $("#form-register").css('border-width', '1px');
+            }
+            if ($("#form-register2").val() == "" || $("#form-register2").val().length !== 10) {
+                $('.not-found-container-invalid-num').fadeIn();
+                $("#form-register2").css('border-color', 'red');
+                $("#form-register2").css('border-width', '2px');
+                error = error + 'phone';
+            } else {
+                $("#form-register2").css('border-color', '#BCE0FD');
+                $("#form-register2").css('border-width', '1px');
+            }
+
+            if (error == "") {
+
+                $(".loader-container-login").css({
+                    "width": "92vw",
+                    "height": "20px",
+                    "margin-top": "40px",
+                    "margin-bottom": "20px"
+                })
+                $(".loader-container-login").removeClass('d-none');
+                setCookie('page', 'registration', 1);
+                function setCookie(token, value, days) {
+
+                    var expires = "";
+                    if (days) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                        expires = "; domain=govtjobkaro.com; expires=" + date.toUTCString();
+                    }
+                    document.cookie = token + "=" + (value || "") + expires + "; path=/";
+
+                }
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/user-register.php',
+                    dataType: "json",
+                    data: {
+                        type: 'notification',
+                        name: $('#form-register').val(),
+                        mobile: $("#form-register2").val()
+                    },
+                    success: function (obj) {
+                        if (obj.status == 'success') {
+                            $(".loader-container-login").addClass('d-none');
+                            $('#form-register').attr('disabled', 'disabled');
+                            $('#form-register2').attr('disabled', 'disabled');
+                            $('#wrong-number-sign-up-mob').fadeIn();
+                            $('#showDivMob2').css("display", "block");
+                            $('#getotpMob').hide();
+                            // window.location = '?name=' + $('#name-register').val() + '&mobile=' + $("#phone-register").val() + '';
+
+                        } else if (obj.status == 'failure') {
+                            // alert(obj.msg);
+                            $(".loader-container-login").addClass('d-none');
+
+                            $('.not-found-containerMob2').fadeIn();
+
+                        } else {
+                            alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                        }
+                    }
+                });
+            }
+        });
+
+
+        $(document).ready(function () {
+            function readCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+
+            var value = readCookie('page');
+
+            if (value == "registration") {
+                $(".register2").show();
+                $(".register1").hide();
+                $("#login-register").hide();
+                $("#login-register2").show();
+            } else {
+                $(".register1").show();
+                $(".register2").hide();
+            }
+            // console.log(value);
+
+
+
+            function setCookie(token, value, days) {
+
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; domain=govtjobkaro.com; expires=" + date.toUTCString();
+                }
+                document.cookie = token + "=" + (value || "") + expires + "; path=/";
+
+            }
+        })
+
+
+
+
+
+
+        $("#sign-up2").click(function () {
+            $(".register2").stop().fadeIn("slow");
+            $(".register1").hide();
+            $("#login-register").hide();
+            $("#login-register2").fadeIn("slow");
+
+        });
+        $("#sign-in2").click(function () {
+            $(".register1").stop().fadeIn("slow");
+            $(".register2").hide();
+            $("#login-register2").hide();
+            $("#login-register").fadeIn("slow");
+        });
+        $("#login-register").click(function () {
+            $(".register2").stop().fadeIn("slow");
+            $(".register1").hide();
+            $("#login-register").hide();
+            $("#login-register2").fadeIn("slow");
+        });
+
+        $("#login-register2").click(function () {
+            $(".register1").stop().fadeIn("slow");
+            $(".register2").hide();
+            $("#login-register2").hide();
+            $("#login-register").fadeIn("slow");
+        })
+
+
+        $(".header-mobile").load('template/header-mobile.html');
+        $(".navbar-bottom").load('template/navBottom-mobile.html');
+        // mobile navbar-bottom
+        $('.navbar-bottom').addClass('navbar-fixed-bottom');
+        // header animation
+        $(window).scroll(function () {
+            var sticky = $('.header'),
+                scroll = $(window).scrollTop();
+
+            if (scroll >= 100) {
+                sticky.addClass('fixed shadow');
+            } else {
+                sticky.removeClass('fixed shadow');
+            }
+        });
+        // 
+        $(window).scroll(function () {
+            var sticky = $('.header-mobile'),
+                scroll = $(window).scrollTop();
+
+            if (scroll >= 100) {
+                sticky.addClass('fixed shadow');
+            } else {
+                sticky.removeClass('fixed shadow');
+            }
+        });
+        // for mobile bottom nav
+        var navItems = document.querySelectorAll(".mobile-bottom-nav__item");
+        navItems.forEach(function (e, i) {
+            e.addEventListener("click", function (e) {
+                navItems.forEach(function (e2, i2) {
+                    e2.classList.remove("mobile-bottom-nav__item--active");
+                })
+                this.classList.add("mobile-bottom-nav__item--active");
+            });
+        });
+
+
+        // for desktop
+        $(document).ready(function () {
+            $("#reg").click(function () {
+                $('.register2').stop().fadeIn('slow');
+                $('.register1').hide();
+            });
+            $("#log").click(function () {
+                $('.register1').stop().fadeIn('slow');
+                $('.register2').hide();
+            });
+        })
+
+        // getotp for login
+
+
+        $("#getotp").on("click", function (e) {
+            e.preventDefault();
+            var error = "";
+            var mobile = $("#phone-login").val();
+            if (mobile == "" || mobile.length !== 10) {
+                $('.not-found-container-invalid-num').fadeIn();
+                $("#phone-login").css('border-color', 'red');
+                $("#phone-login").css('border-width', '2px');
+                error = error + 'mobile';
+            } else {
+                $("#phone-login").css('border-color', '#BCE0FD');
+                $("#phone-login").css('border-width', '1px');
+            }
+
+
+            if (error == "") {
+                $(".loader-container-login").removeClass('d-none');
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/user-login.php',
+                    dataType: "json",
+                    data: {
+                        mobile: mobile
+                    },
+                    success: function (obj) {
+                        if (obj.status == 'success') {
+                            $(".loader-container-login").addClass('d-none');
+                            $('#phone-login').attr('disabled', 'disabled');
+                            $('#phone-login').attr('value', mobile);
+                            $('.otp-input').css('display', 'block');
+                            $('#wrong-number-login').fadeIn();
+                            $('.getOtpDiv').css('display', 'none');
+                            // window.location = 'login-otp?mobile='+ $("#phone-login").val() +'';
+                        } else if (obj.status == 'failure') {
+                            $(".loader-container-login").addClass('d-none');
+
+                            //Email already registered
+                            // alert(obj.msg);
+                            $('.not-found-container').fadeIn();
+
+                        } else {
+                            alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                        }
+                    }
+                });
+            }
+        });
+
+
+        //Sign In and Sign Up
+
+        $("#sign-up").click(function () {
+            $('.register2').stop().fadeIn('slow');
+            $('.register1').hide();
+        });
+        $("#sign-in").click(function () {
+            $('.register1').stop().fadeIn('slow');
+            $('.register2').hide();
+        });
+        // register 
+
+
+
+
+
+
+        $("#register-otp").on("click", function () {
+            // e.preventDefault();
+            event.preventDefault();
+            var error = "";
+
+            if ($("#name-register").val() == "") {
+                $("#name-register").css('border-color', 'red');
+                $("#name-register").css('border-width', '2px');
+                error = error + 'name';
+            } else {
+                $("#name-register").css('border-color', '#BCE0FD');
+                $("#name-register").css('border-width', '1px');
+            }
+            if ($("#phone-register").val() == "" || $("#phone-register").val().length !== 10) {
+                $('.not-found-container-invalid-num').fadeIn();
+                $("#phone-register").css('border-color', 'red');
+                $("#phone-register").css('border-width', '2px');
+                error = error + 'phone';
+            } else {
+                $("#phone-register").css('border-color', '#BCE0FD');
+                $("#phone-register").css('border-width', '1px');
+            }
+
+            if (error == "") {
+                $(".loader-container-login").removeClass('d-none');
+                setCookie('page', 'registration', 1);
+                function setCookie(token, value, days) {
+
+                    var expires = "";
+                    if (days) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                        expires = "; domain=govtjobkaro.com; expires=" + date.toUTCString();
+                    }
+                    document.cookie = token + "=" + (value || "") + expires + "; path=/";
+
+                }
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/user-register.php',
+                    dataType: "json",
+                    data: {
+                        type: 'notification',
+                        name: $('#name-register').val(),
+                        mobile: $("#phone-register").val()
+                    },
+                    success: function (obj) {
+                        if (obj.status == 'success') {
+                            $(".loader-container-login").addClass('d-none');
+                            $("#name-register").attr('disabled', 'disabled');
+                            $('#wrong-number-sign-up').fadeIn();
+                            $("#phone-register").attr('disabled', 'disabled');
+                            $("#showDiv").fadeIn();
+                            $("#register-otp").hide();
+
+
+                            // window.location = '?name=' + $('#name-register').val() + '&mobile=' + $("#phone-register").val() + '';
+
+                        } else if (obj.status == 'failure') {
+                            // alert(obj.msg);
+                            $(".loader-container-login").addClass('d-none');
+                            $('.not-found-container2').fadeIn();
+
+                        } else {
+                            alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                        }
+                    }
+                });
+            }
+        });
+
+        //Wrong number input
+
+        $('.wrong-number').click(function () {
+            $('.otp-input').hide();
+            $("#showDiv").hide();
+            $('.getOtpDiv').fadeIn();
+            $('.wrong-number').fadeOut();
+            $('#phone-login').removeAttr('disabled');
+            $('#phone-register').removeAttr('disabled');
+            $('#name-register').removeAttr('disabled');
+            $("#register-otp").fadeIn();
+        })
+
+        $('.wrong-number-mob').click(function () {
+            $('#registration-otp').removeAttr('disabled');
+            $('.wrong-number-mob').fadeOut();
+            $('#getotp2').fadeIn();
+            $('#showDivMob').css("display", "none");
+            $('#form-register').removeAttr('disabled');
+            $('#form-register2').removeAttr('disabled');
+            $('#getotpMob').fadeIn();
+            $('#showDivMob2').css("display", "none");
+        })
+
+        //resend otp 
+        function otp() {
+            var mobile = $("#phone-login").val();
+            $.ajax({
+                type: 'POST',
+                url: 'php/reSendOtp.php',
+                dataType: "json",
+                data: {
+                    mobile: mobile
+                },
+                success: function (obj) {
+                    if (obj.status == 'success') {
+                        alert('OTP is sent to your Registerd Mobile Number');
+                        // window.location = 'register-otp?mobile='+ $("#phone-login").val() +'';
+                    } else if (obj.status == 'failure') {
+                        alert('OTP Send failed try again later');
+                    } else {
+                        alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                    }
+                }
+            });
+        }
+
+        function otpSignIn() {
+            var mobile = $("#phone-register").val();
+            $.ajax({
+                type: 'POST',
+                url: 'php/reSendOtp.php',
+                dataType: "json",
+                data: {
+                    mobile: mobile
+                },
+                success: function (obj) {
+                    if (obj.status == 'success') {
+                        alert('OTP is sent to your Registerd Mobile Number');
+                        // window.location = 'register-otp?mobile='+ $("#phone-login").val() +'';
+                    } else if (obj.status == 'failure') {
+                        alert('OTP Send failed try again later');
+                    } else {
+                        alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                    }
+                }
+            });
+        }
+
+        function otpMob() {
+            var mobile = $("#registration-otp").val();
+            $.ajax({
+                type: 'POST',
+                url: 'php/reSendOtp.php',
+                dataType: "json",
+                data: {
+                    mobile: mobile
+                },
+                success: function (obj) {
+                    if (obj.status == 'success') {
+                        alert('OTP is sent to your Registerd Mobile Number');
+                        // window.location = 'register-otp?mobile='+ $("#phone-login").val() +'';
+                    } else if (obj.status == 'failure') {
+                        alert('OTP Send failed try again later');
+                    } else {
+                        alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                    }
+                }
+            });
+        }
+
+        function otpSignInMob() {
+            var mobile = $("#form-register2").val();
+            $.ajax({
+                type: 'POST',
+                url: 'php/reSendOtp.php',
+                dataType: "json",
+                data: {
+                    mobile: mobile
+                },
+                success: function (obj) {
+                    if (obj.status == 'success') {
+                        alert('OTP is sent to your Registerd Mobile Number');
+                        // window.location = 'register-otp?mobile='+ $("#phone-login").val() +'';
+                    } else if (obj.status == 'failure') {
+                        alert('OTP Send failed try again later');
+                    } else {
+                        alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                    }
+                }
+            });
+        }
+
+        // enterotp for login
+        $("#signIn").on("click", function (e) {
+            e.preventDefault();
+            var error = "";
+
+            if ($("#phone-login").val() == "") {
+                $("#phone-login").css('border-color', 'red');
+                $("#phone-login").css('border-width', '2px');
+                error = error + 'mobile';
+            } else {
+                $("#phone-login").css('border-color', '#BCE0FD');
+                $("#phone-login").css('border-width', '1px');
+            }
+            if ($("#phone-otp").val() == "") {
+                $("#phone-otp").css('border-color', 'red');
+                $("#phone-otp").css('border-width', '2px');
+                error = error + 'mobile';
+            } else {
+                $("#phone-otp").css('border-color', '#BCE0FD');
+                $("#phone-otp").css('border-width', '1px');
+            }
+
+            if (error == "") {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/user-login.php',
+                    dataType: "json",
+                    data: {
+                        mobileNo: $("#phone-login").val(),
+                        otp: $("#phone-otp").val()
+                    },
+                    success: function (obj) {
+                        if (obj.status == 'success') {
+                            window.dataLayer = window.dataLayer || [];
+                            window.dataLayer.push({
+                                event: 'login',
+                                method: 'OTP'
+                            });
+                            value = obj.token;
+                            days = '30';
+                            setCookie('token', value, 30);
+                            function setCookie(token, value, days) {
+                                var expires = "";
+                                if (days) {
+                                    var date = new Date();
+                                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                                    expires = "; domain=govtjobkaro.com; expires=" + date.toUTCString();
+                                }
+                                document.cookie = token + "=" + (value || "") + expires + "; path=/";
+                            }
+                            window.location = 'user-dashboard';
+                        } else if (obj.status == 'failure') {
+                            //Email already registered
+                            // alert(obj.msg);
+                            $('.not-found-container-otp').fadeIn();
+                        } else {
+                            alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                        }
+                    }
+                });
+            }
+        });
+
+        $("#signUp").on("click", function (e) {
+            e.preventDefault();
+            var error = "";
+
+            if ($("#phone-register").val() == "") {
+                $("#phone-register").css('border-color', 'red');
+                $("#phone-register").css('border-width', '2px');
+                error = error + 'mobile';
+            } else {
+                $("#phone-register").css('border-color', '#BCE0FD');
+                $("#phone-register").css('border-width', '1px');
+            }
+            if ($("#otp-register").val() == "") {
+                $("#otp-register").css('border-color', 'red');
+                $("#otp-register").css('border-width', '2px');
+                error = error + 'mobile';
+            } else {
+                $("#otp-register").css('border-color', '#BCE0FD');
+                $("#otp-register").css('border-width', '1px');
+            }
+
+            if (error == "") {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/user-login.php',
+                    dataType: "json",
+                    data: {
+                        mobileNo: $("#phone-register").val(),
+                        otp: $("#otp-register").val()
+                    },
+                    success: function (obj) {
+                        if (obj.status == 'success') {
+                            window.dataLayer = window.dataLayer || [];
+                            window.dataLayer.push({
+                                event: 'sign_up',
+                                method: 'notification'
+                            });
+                            value = obj.token;
+                            days = '30';
+                            setCookie('token', value, 30);
+                            function setCookie(token, value, days) {
+                                var expires = "";
+                                if (days) {
+                                    var date = new Date();
+                                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                                    expires = "; domain=govtjobkaro.com; expires=" + date.toUTCString();
+                                }
+                                document.cookie = token + "=" + (value || "") + expires + "; path=/";
+                            }
+                            window.location = 'reg-success';
+                        } else if (obj.status == 'failure') {
+                            //Email already registered
+                            $('.not-found-container-otp').fadeIn();
+                            // alert(obj.msg);
+                        } else {
+                            alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                        }
+                    }
+                });
+            }
+        });
+
+        $("#signInMob").on("click", function (e) {
+            e.preventDefault();
+            var error = "";
+
+            if ($("#registration-otp").val() == "") {
+                $("#registration-otp").css('border-color', 'red');
+                $("#registration-otp").css('border-width', '2px');
+                error = error + 'mobile';
+            } else {
+                $("#registration-otp").css('border-color', '#BCE0FD');
+                $("#registration-otp").css('border-width', '1px');
+            }
+            if ($("#otp-register3").val() == "") {
+                $("#otp-register3").css('border-color', 'red');
+                $("#otp-register3").css('border-width', '2px');
+                error = error + 'mobile';
+            } else {
+                $("#otp-register3").css('border-color', '#BCE0FD');
+                $("#otp-register3").css('border-width', '1px');
+            }
+
+            if (error == "") {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/user-login.php',
+                    dataType: "json",
+                    data: {
+                        mobileNo: $("#registration-otp").val(),
+                        otp: $("#otp-register3").val()
+                    },
+                    success: function (obj) {
+                        if (obj.status == 'success') {
+                            window.dataLayer = window.dataLayer || [];
+                            window.dataLayer.push({
+                                event: 'login',
+                                method: 'OTP'
+                            });
+                            value = obj.token;
+                            days = '30';
+                            setCookie('token', value, 30);
+                            function setCookie(token, value, days) {
+                                var expires = "";
+                                if (days) {
+                                    var date = new Date();
+                                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                                    expires = "; domain=govtjobkaro.com; expires=" + date.toUTCString();
+                                }
+                                document.cookie = token + "=" + (value || "") + expires + "; path=/";
+                            }
+                            window.location = 'user-dashboard';
+                        } else if (obj.status == 'failure') {
+                            //Email already registered
+                            $('.not-found-container-otp').fadeIn();
+                            // alert(obj.msg);
+                        } else {
+                            alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                        }
+                    }
+                });
+            }
+        });
+
+        $("#signUpMob").on("click", function (e) {
+            e.preventDefault();
+            var error = "";
+
+            if ($("#form-register").val() == "") {
+                $("#form-register").css('border-color', 'red');
+                $("#form-register").css('border-width', '2px');
+                error = error + 'mobile';
+            } else {
+                $("#form-register").css('border-color', '#BCE0FD');
+                $("#form-register").css('border-width', '1px');
+            }
+            if ($("#otp-register2").val() == "") {
+                $("#otp-register2").css('border-color', 'red');
+                $("#otp-register2").css('border-width', '2px');
+                error = error + 'mobile';
+            } else {
+                $("#otp-register2").css('border-color', '#BCE0FD');
+                $("#otp-register2").css('border-width', '1px');
+            }
+
+            if (error == "") {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/user-login.php',
+                    dataType: "json",
+                    data: {
+                        mobileNo: $("#form-register2").val(),
+                        otp: $("#otp-register2").val()
+                    },
+                    success: function (obj) {
+                        if (obj.status == 'success') {
+                            window.dataLayer = window.dataLayer || [];
+                            window.dataLayer.push({
+                                event: 'sign_up',
+                                method: 'notification'
+                            });
+                            value = obj.token;
+                            days = '30';
+                            setCookie('token', value, 30);
+                            function setCookie(token, value, days) {
+                                var expires = "";
+                                if (days) {
+                                    var date = new Date();
+                                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                                    expires = "; domain=govtjobkaro.com; expires=" + date.toUTCString();
+                                }
+                                document.cookie = token + "=" + (value || "") + expires + "; path=/";
+                            }
+                            window.location = 'reg-success';
+                        } else if (obj.status == 'failure') {
+                            //Email already registered
+                            $('.not-found-container-otp').fadeIn();
+                            // alert(obj.msg);
+                        } else {
+                            alert("Some error occured. Our team is dedicatedly addressing this issue. Thankyou for your patience. If you need any help send an email at info@govtjobkaro.com or call or whatsapp us at +91 7717303385");
+                        }
+                    }
+                });
+            }
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

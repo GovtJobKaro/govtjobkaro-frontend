@@ -1,0 +1,96 @@
+<div class="section2 ">
+    <div class="container">
+        <h2 class="text-center dark">Get Proper Guidance through Our Reputed Partners</h2>
+        <div class="ml-0 mr-0 mt-5 row">
+            <div id="change-m" class="col-lg-4 pt-2 pb-2 pl-4 pr-4" style="min-height: 255px;">
+                <div id="change1-m" class="text-center">
+                    <div class="d-flex justify-content-center">
+                        <img src="https://storage.googleapis.com/govtjobkaro_images/Edusquarenew.png" alt="logo">
+                    </div>
+                    <h5>Our Education Partner</h5>
+                    <p class="mb-0">Punjab's Most Reputed Coaching Institute has Partnered with Us Just to help Improve
+                        the Quality
+                        of Education you Will be Receiving.</p>
+                </div>
+                <div id="change2-m" class="text-center">
+                    <img src="https://storage.googleapis.com/govtjobkaro_images/Artboard 1.png" class="mb-2" alt="logo" style="width: 80px;">
+                    <h5 class="mt-3">Learning skills</h5>
+                    <p class="mb-0">Start streaming on demand video lectures from today in subjects</p>
+                </div>
+            </div>
+            <div id="second-m" class="col-lg-4 pt-2 pb-2 pl-4 pr-4" style="min-height: 255px;">
+                <div id="second1-m" class="text-center">
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="https://storage.googleapis.com/govtjobkaro_images/QBT Logo Black.png" alt="logo">
+                    </div>
+                    <h5>Our Techincal Partner</h5>
+                    <p class="mb-0">India's Most Innovative Technical Company QuadBtechnologies is here with us to
+                        provide you with
+                        the best online Platform for Government Jobs Preparation.</p>
+                </div>
+                <div id="second2-m" class="text-center">
+                    <img src="https://storage.googleapis.com/govtjobkaro_images/logo2.png" class="mb-2" alt="logo" style="width: 80px;">
+                    <h5 class="mt-3">Learning skills</h5>
+                    <p class="mb-0">Start streaming on demand video lectures from today in subjects</p>
+                </div>
+            </div>
+            <div id="change3-m" class="col-lg-4 pt-2 pb-2 pl-4 pr-4" style="min-height: 255px;">
+                <div id="change4-m" class="text-center">
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="https://storage.googleapis.com/govtjobkaro_images/Skill_India.png" alt="logo">
+                    </div>
+                    <h5>Our Education Partner</h5>
+                    <p class="mb-0">Punjab's Most Reputed Coaching Institute has Partnered with Us Just to help Improve
+                        the Quality
+                        of Education you Will be Receiving.</p>
+                </div>
+                <div id="change5-m" class="text-center">
+                    <img src="https://storage.googleapis.com/govtjobkaro_images/Artboard 1.png" class="mb-2" alt="logo" style="width: 80px;">
+                    <h5 class="mt-3">Learning skills</h5>
+                    <p class="mb-0">Start streaming on demand video lectures from today in subjects</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $('#change2-m').hide();
+        $('#second2-m').hide();
+        $('#change5-m').hide();
+
+        $("#change1-m").on("click", function () {
+            $('#change2-m').show();
+            $('#change1-m').hide();
+        });
+
+        $("#change-m").mouseleave(function () {
+            $('#change1-m').show();
+            $('#change2-m').hide();
+        });
+
+        $("#second1-m").on("click", function () {
+            $('#second2-m').show();
+            $('#second1-m').hide();
+
+        });
+
+        $("#second-m").mouseleave(function () {
+            $('#second1-m').show();
+            $('#second2-m').hide();
+        });
+
+        $("#change4-m").on("click", function () {
+            $('#change5-m').show();
+            $('#change4-m').hide();
+
+        });
+
+        $("#change3-m").mouseleave(function () {
+            $('#change4-m').show();
+            $('#change5-m').hide();
+        });
+    })
+</script>

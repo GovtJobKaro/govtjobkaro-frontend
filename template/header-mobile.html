@@ -1,0 +1,93 @@
+<div class="mobile-nav mt-0 d-flex align-items-center" id="header-div"
+    style="padding: 30px 20px 20px 15px; background-color: #FEEFEE;">
+    <img class="mobile-logo" src="https://storage.googleapis.com/govtjobkaro_images/logo.png" alt="logo" width="150">
+    <img class="mobile-logo-partner d-none" src="./images/GovtJobsKaro dark@2x.png" alt="logo" width="150">
+
+    <div id="login-logout" class="poppins-medium">Logout</div>
+</div>
+
+<script>
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    var value = readCookie('token');
+
+    if (value) {
+        $('#login-logout').html('Logout').on('click', logout);
+        $('.mobile-logo').attr('width', '130');
+        $('.mobile-logo-partner').attr('width', '130');
+        $('.mobile-nav').addClass('justify-content-between');
+    }
+    else {
+        $('#login-logout').addClass('d-none');
+        $('.mobile-nav').addClass('justify-content-center');
+    }
+
+    // mobile-logo
+    $(".mobile-logo").on("click", () => {
+        window.location.href = "/";
+    });
+
+    if (location.href.includes('user-dashboard')) {
+        $('#header-div').css('padding', '0');
+        $('#header-div').addClass('pt-4');
+        $('#header-div').addClass('pb-3');
+        $('#header-div').addClass('mb-2');
+    }
+
+    if (location.href.includes('partner')) {
+        $('#header-div').css('background-color', '#33333D');
+        $('#header-div').css('padding', '0');
+        $('#header-div').addClass('pb-3');
+        $('.mobile-logo').addClass('d-none');
+        $('.mobile-logo-partner').removeClass('d-none');
+
+        if (value) {
+            $('#login-logout').html('Logout').on('click', function () {
+                $.ajax({
+                    type: "POST",
+                    url: "php/logout.php",
+                    dataType: "json",
+                    data: {
+                        type: "logout",
+                    },
+                    success: function (obj) {
+                        if (obj.status == "success") {
+                            function delete_cookie(name) {
+                                document.cookie =
+                                    name + "=; Domain=govtjobkaro.com; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+                            }
+                            delete_cookie("token");
+                            window.location = "partner-logout";
+                            // location.reload();
+                        } else {
+                            alert("try again");
+                        }
+                    },
+                });
+            });
+            $('.mobile-nav').addClass('justify-content-between');
+        }
+        else {
+            $('#login-logout').addClass('d-none');
+            $('.mobile-nav').addClass('justify-content-center');
+        }
+    } else if (value) {
+        $('#login-logout').html('Logout').on('click', logout);
+        $('.mobile-nav').addClass('justify-content-between');
+    }
+    else {
+        $('#login-logout').addClass('d-none');
+        $('.mobile-nav').addClass('justify-content-center');
+    }
+</script>
+
+
+<!-- F569621A -->
